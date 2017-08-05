@@ -26,6 +26,7 @@ namespace mV2RayConfig
         Outbound outbound = new Outbound();
         Inbound inbound = new Inbound();
         InBoundSetting inBoundSetting = new InBoundSetting();
+        VmessClients clients = new VmessClients();
         Log log = new Log();
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,11 +38,10 @@ namespace mV2RayConfig
 
             inbound.port = 2332;
             inbound.protocol = "vmess";
+            clients.id = Guid.NewGuid().ToString();
+            clients.alterId = 100;
             JArray centArray = new JArray();
-            JObject clients = new JObject();
-            clients["id"] = "test";
-            clients["alterId"] = 100;
-            centArray.Add(JObject.FromObject(log));
+            centArray.Add(JObject.FromObject(clients));
             inBoundSetting.clients = centArray;
             inbound.settings = inBoundSetting;
             serverInfo.inbound = inbound;
@@ -55,7 +55,7 @@ namespace mV2RayConfig
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form1_Load(null, null);
         }
     }
 }

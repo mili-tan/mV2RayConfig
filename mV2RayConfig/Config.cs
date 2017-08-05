@@ -45,5 +45,11 @@ namespace mV2RayConfig
         {
             public JArray clients { get; set; }
         }
+
+        public class VmessClients
+        {
+            public string id { get; set; }
+            public int alterId { get; set; }
+        }
     }
 }
