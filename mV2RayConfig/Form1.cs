@@ -8,35 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using static mV2RayConfig.Config;
 
 namespace mV2RayConfig
 {
     public partial class Form1 : Form
     {
-        class ServerInfo
-        {
-            public dynamic log { get; set; }
-            public dynamic inbound { get; set; }
-            public dynamic outbound { get; set; }
-        }
 
-        class Log
-        {
-            public string access { get; set; }
-            public string error { get; set; }
-            public string loglevel { get; set; }
-        }
-
-        class Outbound
-        {
-            public string protocol { get; set; }
-            public dynamic settings { get; set; }
-        }
-
-        class ObSet
-        {
-            //空。
-        }
 
         public Form1()
         {
@@ -55,7 +33,7 @@ namespace mV2RayConfig
             serverInfo.log = log;
 
             outbound.protocol = "freedom";
-            outbound.settings = new ObSet();
+            outbound.settings = new Setting();
             serverInfo.outbound = outbound;
 
             richTextBox1.Text = JsonConvert.SerializeObject(serverInfo);
