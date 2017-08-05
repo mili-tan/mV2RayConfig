@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,13 @@ namespace mV2RayConfig
             public string loglevel { get; set; }
         }
 
+        public class Inbound
+        {
+            public int port { get; set; }
+            public string protocol { get; set; }
+            public dynamic settings { get; set; }
+        }
+
         public class Outbound
         {
             public string protocol { get; set; }
@@ -31,6 +39,11 @@ namespace mV2RayConfig
         public class Setting
         {
             //空。
+        }
+
+        public class InBoundSetting
+        {
+            public JArray clients { get; set; }
         }
     }
 }

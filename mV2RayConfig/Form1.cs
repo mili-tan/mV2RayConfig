@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using static mV2RayConfig.Config;
+using Newtonsoft.Json.Linq;
 
 namespace mV2RayConfig
 {
@@ -23,6 +24,8 @@ namespace mV2RayConfig
 
         ServerInfo serverInfo = new ServerInfo();
         Outbound outbound = new Outbound();
+        Inbound inbound = new Inbound();
+        InBoundSetting inBoundSetting = new InBoundSetting();
         Log log = new Log();
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,6 +34,17 @@ namespace mV2RayConfig
             log.error = "/var/log/v2ray/error.log";
             log.loglevel = "warning";
             serverInfo.log = log;
+
+            inbound.port = 2332;
+            inbound.protocol = "vmess";
+            JArray centArray = new JArray();
+            JObject clients = new JObject();
+            clients["id"] = "test";
+            clients["alterId"] = 100;
+            centArray.Add(JObject.FromObject(log));
+            inBoundSetting.clients = centArray;
+            inbound.settings = inBoundSetting;
+            serverInfo.inbound = inbound;
 
             outbound.protocol = "freedom";
             outbound.settings = new Setting();
