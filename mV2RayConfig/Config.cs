@@ -36,11 +36,6 @@ namespace mV2RayConfig
             public dynamic settings { get; set; }
         }
 
-        public class Setting
-        {
-            //空。
-        }
-
         public class InBoundSetting
         {
             public JArray clients { get; set; }

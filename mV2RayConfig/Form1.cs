@@ -47,7 +47,7 @@ namespace mV2RayConfig
             serverInfo.inbound = inbound;
 
             outbound.protocol = "freedom";
-            outbound.settings = new Setting();
+            outbound.settings = new JObject();
             serverInfo.outbound = outbound;
 
             JObject configJson = JObject.FromObject(serverInfo);
