@@ -52,6 +52,9 @@ namespace mV2RayConfig
 
             JObject configJson = JObject.FromObject(serverInfo);
 
+            configJson["outboundDetour"] = JArray.Parse(Resource.outboundDetour);
+            configJson["routing"] = JObject.Parse(Resource.routing);
+
             richTextBox1.Text = MyJson.FormatJsonString(configJson.ToString());
         }
 
