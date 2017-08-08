@@ -50,7 +50,9 @@ namespace mV2RayConfig
             outbound.settings = new Setting();
             serverInfo.outbound = outbound;
 
-            richTextBox1.Text = JsonConvert.SerializeObject(serverInfo);
+            JObject configJson = JObject.FromObject(serverInfo);
+
+            richTextBox1.Text = MyJson.FormatJsonString(configJson.ToString());
         }
 
         private void button1_Click(object sender, EventArgs e)
