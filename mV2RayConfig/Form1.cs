@@ -21,6 +21,7 @@ namespace mV2RayConfig
         {
             InitializeComponent();
             comboBoxLogLevel.SelectedIndex = 2;
+            comboBoxProtocol.SelectedIndex = 0;
         }
 
         ServerInfo serverInfo = new ServerInfo();
@@ -38,8 +39,8 @@ namespace mV2RayConfig
             log.loglevel = comboBoxLogLevel.Text;
             serverInfo.log = log;
 
-            inbound.port = 2332;
-            inbound.protocol = "vmess";
+            inbound.port = Convert.ToInt32(upDownPort.Value);
+            inbound.protocol = comboBoxProtocol.Text;
             clients.id = Guid.NewGuid().ToString();
             clients.alterId = 100;
             JArray centArray = new JArray();
@@ -63,6 +64,11 @@ namespace mV2RayConfig
         private void button1_Click(object sender, EventArgs e)
         {
             Form1_Load(null, null);
+        }
+
+        private void labelPort_Click(object sender, EventArgs e)
+        {
+            upDownPort.Value = new Random(DateTime.Now.Second).Next(2000, 7000);
         }
     }
 }
