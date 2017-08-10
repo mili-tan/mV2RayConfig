@@ -20,6 +20,7 @@ namespace mV2RayConfig
         public Form1()
         {
             InitializeComponent();
+            comboBoxLogLevel.SelectedIndex = 2;
         }
 
         ServerInfo serverInfo = new ServerInfo();
@@ -31,9 +32,10 @@ namespace mV2RayConfig
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            log.access = "/var/log/v2ray/access.log";
-            log.error = "/var/log/v2ray/error.log";
-            log.loglevel = "warning";
+
+            log.access = textBoxAccessLog.Text;
+            log.error = textBoxErrorLog.Text;
+            log.loglevel = comboBoxLogLevel.Text;
             serverInfo.log = log;
 
             inbound.port = 2332;
