@@ -44,7 +44,9 @@ namespace mV2RayConfig
         public class VmessClients
         {
             public string id { get; set; }
+            public int level { get; set; } 
             public int alterId { get; set; }
         }
+
     }
 }

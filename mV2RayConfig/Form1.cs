@@ -44,6 +44,14 @@ namespace mV2RayConfig
             inbound.protocol = comboBoxProtocol.Text;
             clients.id = textBoxUUID.Text;
             clients.alterId = Convert.ToInt32(upDownAlterID.Value);
+            if (checkBoxUserLevel.Checked)
+            {
+                clients.level = 1;
+            }
+            else
+            {
+                clients.level = 0;
+            }
             JArray centArray = new JArray();
             centArray.Add(JObject.FromObject(clients));
             inBoundSetting.clients = centArray;

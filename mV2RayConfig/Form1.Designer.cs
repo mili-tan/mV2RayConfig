@@ -48,6 +48,7 @@
             this.textBoxUUID = new System.Windows.Forms.TextBox();
             this.upDownAlterID = new System.Windows.Forms.NumericUpDown();
             this.buttonUUID = new System.Windows.Forms.Button();
+            this.checkBoxUserLevel = new System.Windows.Forms.CheckBox();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -196,7 +197,7 @@
             this.labelPort.Name = "labelPort";
             this.labelPort.Size = new System.Drawing.Size(128, 20);
             this.labelPort.TabIndex = 8;
-            this.labelPort.Text = "端口号";
+            this.labelPort.Text = "端口 (1~65535)";
             this.labelPort.Click += new System.EventHandler(this.labelPort_Click);
             // 
             // labelProtocol
@@ -256,14 +257,15 @@
             this.tableLayoutPanel1.Controls.Add(this.labelUUID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBoxUUID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonUUID, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.checkBoxUserLevel, 1, 2);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(427, 180);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 193);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 96);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // labelUUID
@@ -322,16 +324,30 @@
             // 
             this.buttonUUID.Location = new System.Drawing.Point(3, 65);
             this.buttonUUID.Name = "buttonUUID";
-            this.buttonUUID.Size = new System.Drawing.Size(128, 32);
+            this.buttonUUID.Size = new System.Drawing.Size(128, 29);
             this.buttonUUID.TabIndex = 11;
             this.buttonUUID.Text = "重新生成UUID";
             this.buttonUUID.UseVisualStyleBackColor = true;
             this.buttonUUID.Click += new System.EventHandler(this.buttonUUID_Click);
             // 
+            // checkBoxUserLevel
+            // 
+            this.checkBoxUserLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxUserLevel.AutoSize = true;
+            this.checkBoxUserLevel.Checked = true;
+            this.checkBoxUserLevel.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxUserLevel.Location = new System.Drawing.Point(137, 67);
+            this.checkBoxUserLevel.Name = "checkBoxUserLevel";
+            this.checkBoxUserLevel.Size = new System.Drawing.Size(273, 24);
+            this.checkBoxUserLevel.TabIndex = 12;
+            this.checkBoxUserLevel.Text = "信任此用户，放宽对此用户的限制";
+            this.checkBoxUserLevel.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 493);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelServerConfig);
@@ -375,6 +391,7 @@
         private System.Windows.Forms.Label labelUUID;
         private System.Windows.Forms.TextBox textBoxUUID;
         private System.Windows.Forms.Button buttonUUID;
+        private System.Windows.Forms.CheckBox checkBoxUserLevel;
     }
 }
 
