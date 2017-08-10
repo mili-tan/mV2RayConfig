@@ -22,6 +22,7 @@ namespace mV2RayConfig
             InitializeComponent();
             comboBoxLogLevel.SelectedIndex = 2;
             comboBoxProtocol.SelectedIndex = 0;
+            textBoxUUID.Text = Guid.NewGuid().ToString();
         }
 
         ServerInfo serverInfo = new ServerInfo();
@@ -41,8 +42,8 @@ namespace mV2RayConfig
 
             inbound.port = Convert.ToInt32(upDownPort.Value);
             inbound.protocol = comboBoxProtocol.Text;
-            clients.id = Guid.NewGuid().ToString();
-            clients.alterId = 100;
+            clients.id = textBoxUUID.Text;
+            clients.alterId = Convert.ToInt32(upDownAlterID.Value);
             JArray centArray = new JArray();
             centArray.Add(JObject.FromObject(clients));
             inBoundSetting.clients = centArray;
@@ -69,6 +70,11 @@ namespace mV2RayConfig
         private void labelPort_Click(object sender, EventArgs e)
         {
             upDownPort.Value = new Random(DateTime.Now.Second).Next(2000, 7000);
+        }
+
+        private void buttonUUID_Click(object sender, EventArgs e)
+        {
+            textBoxUUID.Text = Guid.NewGuid().ToString();
         }
     }
 }
