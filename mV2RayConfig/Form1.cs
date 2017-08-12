@@ -42,18 +42,27 @@ namespace mV2RayConfig
 
             inbound.port = Convert.ToInt32(upDownPort.Value);
             inbound.protocol = comboBoxProtocol.Text;
-            clients.id = textBoxUUID.Text;
-            clients.alterId = Convert.ToInt32(upDownAlterID.Value);
-            if (checkBoxUserLevel.Checked)
+            JArray centArray = new JArray();
+
+            if (!checkBoxManyUser.Checked)
             {
-                clients.level = 1;
+                clients.id = textBoxUUID.Text;
+                clients.alterId = Convert.ToInt32(upDownAlterID.Value);
+                if (checkBoxUserLevel.Checked)
+                {
+                    clients.level = 1;
+                }
+                else
+                {
+                    clients.level = 0;
+                }
+                centArray.Add(JObject.FromObject(clients));
             }
             else
             {
-                clients.level = 0;
+
             }
-            JArray centArray = new JArray();
-            centArray.Add(JObject.FromObject(clients));
+
             inBoundSetting.clients = centArray;
             inbound.settings = inBoundSetting;
             serverInfo.inbound = inbound;
@@ -83,6 +92,51 @@ namespace mV2RayConfig
         private void buttonUUID_Click(object sender, EventArgs e)
         {
             textBoxUUID.Text = Guid.NewGuid().ToString();
+        }
+
+        private void checkBoxManyUser_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxManyUser.Checked)
+            {
+                listBoxManyUser.Enabled = true;
+                buttonAdd.Enabled = true;
+                buttonDel.Enabled = true;
+            }
+            else
+            {
+                listBoxManyUser.Enabled = false;
+                buttonAdd.Enabled = false;
+                buttonDel.Enabled = false;
+            }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            clients.id = textBoxUUID.Text;
+            clients.alterId = Convert.ToInt32(upDownAlterID.Value);
+            if (checkBoxUserLevel.Checked)
+            {
+                clients.level = 1;
+            }
+            else
+            {
+                clients.level = 0;
+            }
+            listBoxManyUser.Items.Add(JsonConvert.SerializeObject(clients));
+            textBoxUUID.Text = Guid.NewGuid().ToString();
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            listBoxManyUser.Items.Remove(listBoxManyUser.SelectedItem);
+        }
+
+        private void listBoxManyUser_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBoxManyUser.SelectedItem != null)
+            {
+                MessageBox.Show(listBoxManyUser.SelectedItem.ToString());
+            }
         }
     }
 }

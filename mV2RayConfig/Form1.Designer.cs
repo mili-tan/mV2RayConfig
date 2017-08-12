@@ -43,17 +43,25 @@
             this.comboBoxProtocol = new System.Windows.Forms.ComboBox();
             this.upDownPort = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelUUID = new System.Windows.Forms.Label();
-            this.labelAlterID = new System.Windows.Forms.Label();
-            this.textBoxUUID = new System.Windows.Forms.TextBox();
             this.upDownAlterID = new System.Windows.Forms.NumericUpDown();
+            this.labelAlterID = new System.Windows.Forms.Label();
+            this.labelUUID = new System.Windows.Forms.Label();
+            this.textBoxUUID = new System.Windows.Forms.TextBox();
             this.buttonUUID = new System.Windows.Forms.Button();
             this.checkBoxUserLevel = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.listBoxManyUser = new System.Windows.Forms.ListBox();
+            this.checkBoxManyUser = new System.Windows.Forms.CheckBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAlterID)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -66,7 +74,7 @@
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.richTextBox1.Location = new System.Drawing.Point(13, 6);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(408, 475);
+            this.richTextBox1.Size = new System.Drawing.Size(408, 585);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -74,7 +82,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(765, 452);
+            this.button1.Location = new System.Drawing.Point(765, 562);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 29);
             this.button1.TabIndex = 1;
@@ -111,7 +119,7 @@
             this.labelLoglevel.AutoSize = true;
             this.labelLoglevel.Location = new System.Drawing.Point(3, 69);
             this.labelLoglevel.Name = "labelLoglevel";
-            this.labelLoglevel.Size = new System.Drawing.Size(128, 20);
+            this.labelLoglevel.Size = new System.Drawing.Size(127, 20);
             this.labelLoglevel.TabIndex = 5;
             this.labelLoglevel.Text = "日志级别";
             // 
@@ -121,7 +129,7 @@
             this.labelErrorLog.AutoSize = true;
             this.labelErrorLog.Location = new System.Drawing.Point(3, 36);
             this.labelErrorLog.Name = "labelErrorLog";
-            this.labelErrorLog.Size = new System.Drawing.Size(128, 20);
+            this.labelErrorLog.Size = new System.Drawing.Size(127, 20);
             this.labelErrorLog.TabIndex = 2;
             this.labelErrorLog.Text = "错误日志储存位置";
             // 
@@ -131,25 +139,25 @@
             this.labelAccessLog.AutoSize = true;
             this.labelAccessLog.Location = new System.Drawing.Point(3, 5);
             this.labelAccessLog.Name = "labelAccessLog";
-            this.labelAccessLog.Size = new System.Drawing.Size(128, 20);
+            this.labelAccessLog.Size = new System.Drawing.Size(127, 20);
             this.labelAccessLog.TabIndex = 1;
             this.labelAccessLog.Text = "访问日志储存位置";
             // 
             // textBoxAccessLog
             // 
             this.textBoxAccessLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAccessLog.Location = new System.Drawing.Point(137, 3);
+            this.textBoxAccessLog.Location = new System.Drawing.Point(136, 3);
             this.textBoxAccessLog.Name = "textBoxAccessLog";
-            this.textBoxAccessLog.Size = new System.Drawing.Size(273, 25);
+            this.textBoxAccessLog.Size = new System.Drawing.Size(274, 25);
             this.textBoxAccessLog.TabIndex = 3;
             this.textBoxAccessLog.Text = "/var/log/v2ray/access.log";
             // 
             // textBoxErrorLog
             // 
             this.textBoxErrorLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxErrorLog.Location = new System.Drawing.Point(137, 34);
+            this.textBoxErrorLog.Location = new System.Drawing.Point(136, 34);
             this.textBoxErrorLog.Name = "textBoxErrorLog";
-            this.textBoxErrorLog.Size = new System.Drawing.Size(273, 25);
+            this.textBoxErrorLog.Size = new System.Drawing.Size(274, 25);
             this.textBoxErrorLog.TabIndex = 4;
             this.textBoxErrorLog.Text = "/var/log/v2ray/error.log";
             // 
@@ -164,9 +172,9 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(136, 68);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
-            this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
+            this.comboBoxLogLevel.Size = new System.Drawing.Size(274, 27);
             this.comboBoxLogLevel.TabIndex = 6;
             // 
             // panelServerConfig
@@ -195,7 +203,7 @@
             this.labelPort.AutoSize = true;
             this.labelPort.Location = new System.Drawing.Point(3, 36);
             this.labelPort.Name = "labelPort";
-            this.labelPort.Size = new System.Drawing.Size(128, 20);
+            this.labelPort.Size = new System.Drawing.Size(127, 20);
             this.labelPort.TabIndex = 8;
             this.labelPort.Text = "端口 (1~65535)";
             this.labelPort.Click += new System.EventHandler(this.labelPort_Click);
@@ -206,7 +214,7 @@
             this.labelProtocol.AutoSize = true;
             this.labelProtocol.Location = new System.Drawing.Point(3, 4);
             this.labelProtocol.Name = "labelProtocol";
-            this.labelProtocol.Size = new System.Drawing.Size(128, 20);
+            this.labelProtocol.Size = new System.Drawing.Size(127, 20);
             this.labelProtocol.TabIndex = 6;
             this.labelProtocol.Text = "服务类型";
             // 
@@ -217,15 +225,15 @@
             this.comboBoxProtocol.FormattingEnabled = true;
             this.comboBoxProtocol.Items.AddRange(new object[] {
             "vmess"});
-            this.comboBoxProtocol.Location = new System.Drawing.Point(137, 3);
+            this.comboBoxProtocol.Location = new System.Drawing.Point(136, 3);
             this.comboBoxProtocol.Name = "comboBoxProtocol";
-            this.comboBoxProtocol.Size = new System.Drawing.Size(273, 27);
+            this.comboBoxProtocol.Size = new System.Drawing.Size(274, 27);
             this.comboBoxProtocol.TabIndex = 7;
             // 
             // upDownPort
             // 
             this.upDownPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.upDownPort.Location = new System.Drawing.Point(137, 34);
+            this.upDownPort.Location = new System.Drawing.Point(136, 34);
             this.upDownPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -237,7 +245,7 @@
             0,
             0});
             this.upDownPort.Name = "upDownPort";
-            this.upDownPort.Size = new System.Drawing.Size(273, 25);
+            this.upDownPort.Size = new System.Drawing.Size(274, 25);
             this.upDownPort.TabIndex = 9;
             this.upDownPort.Value = new decimal(new int[] {
             2332,
@@ -268,39 +276,10 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 96);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // labelUUID
-            // 
-            this.labelUUID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUUID.AutoSize = true;
-            this.labelUUID.Location = new System.Drawing.Point(3, 5);
-            this.labelUUID.Name = "labelUUID";
-            this.labelUUID.Size = new System.Drawing.Size(128, 20);
-            this.labelUUID.TabIndex = 7;
-            this.labelUUID.Text = "用户UUID";
-            // 
-            // labelAlterID
-            // 
-            this.labelAlterID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelAlterID.AutoSize = true;
-            this.labelAlterID.Location = new System.Drawing.Point(3, 36);
-            this.labelAlterID.Name = "labelAlterID";
-            this.labelAlterID.Size = new System.Drawing.Size(128, 20);
-            this.labelAlterID.TabIndex = 8;
-            this.labelAlterID.Text = "AlterID数量";
-            // 
-            // textBoxUUID
-            // 
-            this.textBoxUUID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUUID.Location = new System.Drawing.Point(137, 3);
-            this.textBoxUUID.Name = "textBoxUUID";
-            this.textBoxUUID.Size = new System.Drawing.Size(273, 25);
-            this.textBoxUUID.TabIndex = 9;
-            this.textBoxUUID.Text = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
-            // 
             // upDownAlterID
             // 
             this.upDownAlterID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.upDownAlterID.Location = new System.Drawing.Point(137, 34);
+            this.upDownAlterID.Location = new System.Drawing.Point(136, 34);
             this.upDownAlterID.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -312,7 +291,7 @@
             0,
             0});
             this.upDownAlterID.Name = "upDownAlterID";
-            this.upDownAlterID.Size = new System.Drawing.Size(273, 25);
+            this.upDownAlterID.Size = new System.Drawing.Size(274, 25);
             this.upDownAlterID.TabIndex = 10;
             this.upDownAlterID.Value = new decimal(new int[] {
             32,
@@ -320,11 +299,40 @@
             0,
             0});
             // 
+            // labelAlterID
+            // 
+            this.labelAlterID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAlterID.AutoSize = true;
+            this.labelAlterID.Location = new System.Drawing.Point(3, 36);
+            this.labelAlterID.Name = "labelAlterID";
+            this.labelAlterID.Size = new System.Drawing.Size(127, 20);
+            this.labelAlterID.TabIndex = 8;
+            this.labelAlterID.Text = "AlterID数量";
+            // 
+            // labelUUID
+            // 
+            this.labelUUID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUUID.AutoSize = true;
+            this.labelUUID.Location = new System.Drawing.Point(3, 5);
+            this.labelUUID.Name = "labelUUID";
+            this.labelUUID.Size = new System.Drawing.Size(127, 20);
+            this.labelUUID.TabIndex = 7;
+            this.labelUUID.Text = "用户UUID";
+            // 
+            // textBoxUUID
+            // 
+            this.textBoxUUID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUUID.Location = new System.Drawing.Point(136, 3);
+            this.textBoxUUID.Name = "textBoxUUID";
+            this.textBoxUUID.Size = new System.Drawing.Size(274, 25);
+            this.textBoxUUID.TabIndex = 9;
+            this.textBoxUUID.Text = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
+            // 
             // buttonUUID
             // 
             this.buttonUUID.Location = new System.Drawing.Point(3, 65);
             this.buttonUUID.Name = "buttonUUID";
-            this.buttonUUID.Size = new System.Drawing.Size(128, 29);
+            this.buttonUUID.Size = new System.Drawing.Size(127, 29);
             this.buttonUUID.TabIndex = 11;
             this.buttonUUID.Text = "重新生成UUID";
             this.buttonUUID.UseVisualStyleBackColor = true;
@@ -336,19 +344,96 @@
             this.checkBoxUserLevel.AutoSize = true;
             this.checkBoxUserLevel.Checked = true;
             this.checkBoxUserLevel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxUserLevel.Location = new System.Drawing.Point(137, 67);
+            this.checkBoxUserLevel.Location = new System.Drawing.Point(136, 67);
             this.checkBoxUserLevel.Name = "checkBoxUserLevel";
-            this.checkBoxUserLevel.Size = new System.Drawing.Size(273, 24);
+            this.checkBoxUserLevel.Size = new System.Drawing.Size(274, 24);
             this.checkBoxUserLevel.TabIndex = 12;
             this.checkBoxUserLevel.Text = "信任此用户，放宽对此用户的限制";
             this.checkBoxUserLevel.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.20339F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.79661F));
+            this.tableLayoutPanel2.Controls.Add(this.listBoxManyUser, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.checkBoxManyUser, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(427, 283);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.64151F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.35849F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(413, 159);
+            this.tableLayoutPanel2.TabIndex = 5;
+            // 
+            // listBoxManyUser
+            // 
+            this.listBoxManyUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxManyUser.Enabled = false;
+            this.listBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.listBoxManyUser.FormattingEnabled = true;
+            this.listBoxManyUser.ItemHeight = 19;
+            this.listBoxManyUser.Location = new System.Drawing.Point(135, 39);
+            this.listBoxManyUser.Name = "listBoxManyUser";
+            this.listBoxManyUser.Size = new System.Drawing.Size(275, 117);
+            this.listBoxManyUser.TabIndex = 0;
+            this.listBoxManyUser.DoubleClick += new System.EventHandler(this.listBoxManyUser_DoubleClick);
+            // 
+            // checkBoxManyUser
+            // 
+            this.checkBoxManyUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxManyUser.AutoSize = true;
+            this.checkBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxManyUser.Location = new System.Drawing.Point(135, 6);
+            this.checkBoxManyUser.Name = "checkBoxManyUser";
+            this.checkBoxManyUser.Size = new System.Drawing.Size(275, 24);
+            this.checkBoxManyUser.TabIndex = 13;
+            this.checkBoxManyUser.Text = "启用多用户";
+            this.checkBoxManyUser.UseVisualStyleBackColor = true;
+            this.checkBoxManyUser.CheckedChanged += new System.EventHandler(this.checkBoxManyUser_CheckedChanged);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Enabled = false;
+            this.buttonAdd.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.buttonAdd.Location = new System.Drawing.Point(0, 3);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(126, 29);
+            this.buttonAdd.TabIndex = 14;
+            this.buttonAdd.Text = "添加用户";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.Enabled = false;
+            this.buttonDel.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.buttonDel.Location = new System.Drawing.Point(0, 38);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(126, 29);
+            this.buttonDel.TabIndex = 15;
+            this.buttonDel.Text = "删除用户";
+            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonDel);
+            this.panel1.Controls.Add(this.buttonAdd);
+            this.panel1.Location = new System.Drawing.Point(3, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(126, 117);
+            this.panel1.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(852, 493);
+            this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelServerConfig);
             this.Controls.Add(this.panelLog);
@@ -365,6 +450,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAlterID)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -392,6 +480,12 @@
         private System.Windows.Forms.TextBox textBoxUUID;
         private System.Windows.Forms.Button buttonUUID;
         private System.Windows.Forms.CheckBox checkBoxUserLevel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ListBox listBoxManyUser;
+        private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.CheckBox checkBoxManyUser;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
