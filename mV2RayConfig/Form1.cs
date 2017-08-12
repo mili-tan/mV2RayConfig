@@ -60,7 +60,10 @@ namespace mV2RayConfig
             }
             else
             {
-
+                foreach (var item in listBoxManyUser.Items)
+                {
+                    centArray.Add(JObject.Parse(item.ToString()));
+                }
             }
 
             inBoundSetting.clients = centArray;
