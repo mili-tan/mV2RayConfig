@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBoxConfig = new System.Windows.Forms.RichTextBox();
+            this.buttonNewGen = new System.Windows.Forms.Button();
             this.panelLog = new System.Windows.Forms.TableLayoutPanel();
             this.labelLoglevel = new System.Windows.Forms.Label();
             this.labelErrorLog = new System.Windows.Forms.Label();
@@ -51,10 +51,11 @@
             this.checkBoxUserLevel = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.listBoxManyUser = new System.Windows.Forms.ListBox();
-            this.checkBoxManyUser = new System.Windows.Forms.CheckBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.checkBoxManyUser = new System.Windows.Forms.CheckBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -64,39 +65,39 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // richTextBoxConfig
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.richTextBoxConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox1.Location = new System.Drawing.Point(13, 6);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(408, 585);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.richTextBoxConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBoxConfig.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxConfig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBoxConfig.Location = new System.Drawing.Point(13, 6);
+            this.richTextBoxConfig.Name = "richTextBoxConfig";
+            this.richTextBoxConfig.Size = new System.Drawing.Size(408, 585);
+            this.richTextBoxConfig.TabIndex = 0;
+            this.richTextBoxConfig.Text = "";
             // 
-            // button1
+            // buttonNewGen
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(765, 562);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "生成";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonNewGen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNewGen.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonNewGen.Location = new System.Drawing.Point(765, 562);
+            this.buttonNewGen.Name = "buttonNewGen";
+            this.buttonNewGen.Size = new System.Drawing.Size(75, 29);
+            this.buttonNewGen.TabIndex = 1;
+            this.buttonNewGen.Text = "生成";
+            this.buttonNewGen.UseVisualStyleBackColor = true;
+            this.buttonNewGen.Click += new System.EventHandler(this.buttonNewGen_Click);
             // 
             // panelLog
             // 
             this.panelLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelLog.BackColor = System.Drawing.Color.Transparent;
             this.panelLog.ColumnCount = 2;
-            this.panelLog.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.44552F));
-            this.panelLog.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.55448F));
+            this.panelLog.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.68765F));
+            this.panelLog.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.31235F));
             this.panelLog.Controls.Add(this.labelLoglevel, 0, 2);
             this.panelLog.Controls.Add(this.labelErrorLog, 0, 1);
             this.panelLog.Controls.Add(this.labelAccessLog, 0, 0);
@@ -119,7 +120,7 @@
             this.labelLoglevel.AutoSize = true;
             this.labelLoglevel.Location = new System.Drawing.Point(3, 69);
             this.labelLoglevel.Name = "labelLoglevel";
-            this.labelLoglevel.Size = new System.Drawing.Size(127, 20);
+            this.labelLoglevel.Size = new System.Drawing.Size(128, 20);
             this.labelLoglevel.TabIndex = 5;
             this.labelLoglevel.Text = "日志级别";
             // 
@@ -129,7 +130,7 @@
             this.labelErrorLog.AutoSize = true;
             this.labelErrorLog.Location = new System.Drawing.Point(3, 36);
             this.labelErrorLog.Name = "labelErrorLog";
-            this.labelErrorLog.Size = new System.Drawing.Size(127, 20);
+            this.labelErrorLog.Size = new System.Drawing.Size(128, 20);
             this.labelErrorLog.TabIndex = 2;
             this.labelErrorLog.Text = "错误日志储存位置";
             // 
@@ -139,25 +140,25 @@
             this.labelAccessLog.AutoSize = true;
             this.labelAccessLog.Location = new System.Drawing.Point(3, 5);
             this.labelAccessLog.Name = "labelAccessLog";
-            this.labelAccessLog.Size = new System.Drawing.Size(127, 20);
+            this.labelAccessLog.Size = new System.Drawing.Size(128, 20);
             this.labelAccessLog.TabIndex = 1;
             this.labelAccessLog.Text = "访问日志储存位置";
             // 
             // textBoxAccessLog
             // 
             this.textBoxAccessLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAccessLog.Location = new System.Drawing.Point(136, 3);
+            this.textBoxAccessLog.Location = new System.Drawing.Point(137, 3);
             this.textBoxAccessLog.Name = "textBoxAccessLog";
-            this.textBoxAccessLog.Size = new System.Drawing.Size(274, 25);
+            this.textBoxAccessLog.Size = new System.Drawing.Size(273, 25);
             this.textBoxAccessLog.TabIndex = 3;
             this.textBoxAccessLog.Text = "/var/log/v2ray/access.log";
             // 
             // textBoxErrorLog
             // 
             this.textBoxErrorLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxErrorLog.Location = new System.Drawing.Point(136, 34);
+            this.textBoxErrorLog.Location = new System.Drawing.Point(137, 34);
             this.textBoxErrorLog.Name = "textBoxErrorLog";
-            this.textBoxErrorLog.Size = new System.Drawing.Size(274, 25);
+            this.textBoxErrorLog.Size = new System.Drawing.Size(273, 25);
             this.textBoxErrorLog.TabIndex = 4;
             this.textBoxErrorLog.Text = "/var/log/v2ray/error.log";
             // 
@@ -172,9 +173,9 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(136, 68);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
-            this.comboBoxLogLevel.Size = new System.Drawing.Size(274, 27);
+            this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
             this.comboBoxLogLevel.TabIndex = 6;
             // 
             // panelServerConfig
@@ -201,7 +202,7 @@
             // 
             this.labelPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPort.AutoSize = true;
-            this.labelPort.Location = new System.Drawing.Point(3, 36);
+            this.labelPort.Location = new System.Drawing.Point(3, 38);
             this.labelPort.Name = "labelPort";
             this.labelPort.Size = new System.Drawing.Size(127, 20);
             this.labelPort.TabIndex = 8;
@@ -212,7 +213,7 @@
             // 
             this.labelProtocol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProtocol.AutoSize = true;
-            this.labelProtocol.Location = new System.Drawing.Point(3, 4);
+            this.labelProtocol.Location = new System.Drawing.Point(3, 6);
             this.labelProtocol.Name = "labelProtocol";
             this.labelProtocol.Size = new System.Drawing.Size(127, 20);
             this.labelProtocol.TabIndex = 6;
@@ -233,7 +234,7 @@
             // upDownPort
             // 
             this.upDownPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.upDownPort.Location = new System.Drawing.Point(136, 34);
+            this.upDownPort.Location = new System.Drawing.Point(136, 36);
             this.upDownPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -355,8 +356,8 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.20339F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.79661F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.44552F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.55448F));
             this.tableLayoutPanel2.Controls.Add(this.listBoxManyUser, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.checkBoxManyUser, 1, 0);
@@ -375,36 +376,20 @@
             this.listBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.listBoxManyUser.FormattingEnabled = true;
             this.listBoxManyUser.ItemHeight = 19;
-            this.listBoxManyUser.Location = new System.Drawing.Point(135, 39);
+            this.listBoxManyUser.Location = new System.Drawing.Point(136, 39);
             this.listBoxManyUser.Name = "listBoxManyUser";
-            this.listBoxManyUser.Size = new System.Drawing.Size(275, 117);
+            this.listBoxManyUser.Size = new System.Drawing.Size(274, 117);
             this.listBoxManyUser.TabIndex = 0;
             this.listBoxManyUser.DoubleClick += new System.EventHandler(this.listBoxManyUser_DoubleClick);
             // 
-            // checkBoxManyUser
+            // panel1
             // 
-            this.checkBoxManyUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxManyUser.AutoSize = true;
-            this.checkBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.checkBoxManyUser.Location = new System.Drawing.Point(135, 6);
-            this.checkBoxManyUser.Name = "checkBoxManyUser";
-            this.checkBoxManyUser.Size = new System.Drawing.Size(275, 24);
-            this.checkBoxManyUser.TabIndex = 13;
-            this.checkBoxManyUser.Text = "启用多用户";
-            this.checkBoxManyUser.UseVisualStyleBackColor = true;
-            this.checkBoxManyUser.CheckedChanged += new System.EventHandler(this.checkBoxManyUser_CheckedChanged);
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Enabled = false;
-            this.buttonAdd.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.buttonAdd.Location = new System.Drawing.Point(0, 3);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(126, 29);
-            this.buttonAdd.TabIndex = 14;
-            this.buttonAdd.Text = "添加用户";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.panel1.Controls.Add(this.buttonDel);
+            this.panel1.Controls.Add(this.buttonAdd);
+            this.panel1.Location = new System.Drawing.Point(3, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(127, 117);
+            this.panel1.TabIndex = 16;
             // 
             // buttonDel
             // 
@@ -418,14 +403,42 @@
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // panel1
+            // buttonAdd
             // 
-            this.panel1.Controls.Add(this.buttonDel);
-            this.panel1.Controls.Add(this.buttonAdd);
-            this.panel1.Location = new System.Drawing.Point(3, 39);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(126, 117);
-            this.panel1.TabIndex = 16;
+            this.buttonAdd.Enabled = false;
+            this.buttonAdd.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.buttonAdd.Location = new System.Drawing.Point(0, 3);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(126, 29);
+            this.buttonAdd.TabIndex = 14;
+            this.buttonAdd.Text = "添加用户";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // checkBoxManyUser
+            // 
+            this.checkBoxManyUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxManyUser.AutoSize = true;
+            this.checkBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxManyUser.Location = new System.Drawing.Point(136, 6);
+            this.checkBoxManyUser.Name = "checkBoxManyUser";
+            this.checkBoxManyUser.Size = new System.Drawing.Size(274, 24);
+            this.checkBoxManyUser.TabIndex = 13;
+            this.checkBoxManyUser.Text = "启用多用户";
+            this.checkBoxManyUser.UseVisualStyleBackColor = true;
+            this.checkBoxManyUser.CheckedChanged += new System.EventHandler(this.checkBoxManyUser_CheckedChanged);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSave.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonSave.Location = new System.Drawing.Point(684, 562);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 29);
+            this.buttonSave.TabIndex = 6;
+            this.buttonSave.Text = "保存";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // Form1
             // 
@@ -433,12 +446,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelServerConfig);
             this.Controls.Add(this.panelLog);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.buttonNewGen);
+            this.Controls.Add(this.richTextBoxConfig);
             this.Name = "Form1";
             this.Text = "V2RayConfig";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -459,8 +473,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBoxConfig;
+        private System.Windows.Forms.Button buttonNewGen;
         private System.Windows.Forms.TableLayoutPanel panelLog;
         private System.Windows.Forms.Label labelErrorLog;
         private System.Windows.Forms.Label labelAccessLog;
@@ -486,6 +500,7 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.CheckBox checkBoxManyUser;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
 
