@@ -131,9 +131,13 @@ namespace mV2RayConfig
             serverInfo.outbound = outbound;
 
             JObject configJson = JObject.FromObject(serverInfo);
+            JObject stream = new JObject();
 
-            configJson["outboundDetour"] = JArray.Parse(Resource.outboundDetour);
-            configJson["routing"] = JObject.Parse(Resource.routing);
+            configJson["outboundDetour"] = JArray.Parse(outboundDetourStr);
+            if (checkBoxRouting.Checked)
+            {
+                configJson["routing"] = JObject.Parse(routingStr);
+            }
 
             return MyJson.FormatJsonString(configJson.ToString());
         }

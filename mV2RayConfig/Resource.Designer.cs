@@ -61,6 +61,15 @@ namespace mV2RayConfig {
         }
         
         /// <summary>
+        ///   查找类似 {&quot;header&quot;:{&quot;type&quot;:&quot;http&quot;,&quot;response&quot;:{&quot;version&quot;:&quot;1.1&quot;,&quot;status&quot;:&quot;200&quot;,&quot;reason&quot;:&quot;OK&quot;,&quot;headers&quot;:{&quot;Content-Type&quot;:[&quot;application/octet-stream&quot;,&quot;application/x-msdownload&quot;,&quot;text/html&quot;,&quot;application/x-shockwave-flash&quot;],&quot;Transfer-Encoding&quot;:[&quot;chunked&quot;],&quot;Connection&quot;:[&quot;keep-alive&quot;],&quot;Pragma&quot;:&quot;no-cache&quot;}}}} 的本地化字符串。
+        /// </summary>
+        public static string httpFake {
+            get {
+                return ResourceManager.GetString("httpFake", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 [{&quot;protocol&quot;:&quot;blackhole&quot;,&quot;settings&quot;:{},&quot;tag&quot;:&quot;blocked&quot;}] 的本地化字符串。
         /// </summary>
         public static string outboundDetour {

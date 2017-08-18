@@ -56,6 +56,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.checkBoxManyUser = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.checkBoxRouting = new System.Windows.Forms.CheckBox();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -440,12 +441,27 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // checkBoxRouting
+            // 
+            this.checkBoxRouting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxRouting.AutoSize = true;
+            this.checkBoxRouting.Checked = true;
+            this.checkBoxRouting.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRouting.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxRouting.Location = new System.Drawing.Point(564, 445);
+            this.checkBoxRouting.Name = "checkBoxRouting";
+            this.checkBoxRouting.Size = new System.Drawing.Size(203, 24);
+            this.checkBoxRouting.TabIndex = 7;
+            this.checkBoxRouting.Text = "启用路由规则 屏蔽内网访问";
+            this.checkBoxRouting.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.checkBoxRouting);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -468,6 +484,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -501,6 +518,7 @@
         private System.Windows.Forms.CheckBox checkBoxManyUser;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.CheckBox checkBoxRouting;
     }
 }
 

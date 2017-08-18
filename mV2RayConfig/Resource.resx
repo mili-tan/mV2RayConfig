@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="httpFake" xml:space="preserve">
+    <value>{"header":{"type":"http","response":{"version":"1.1","status":"200","reason":"OK","headers":{"Content-Type":["application/octet-stream","application/x-msdownload","text/html","application/x-shockwave-flash"],"Transfer-Encoding":["chunked"],"Connection":["keep-alive"],"Pragma":"no-cache"}}}}</value>
+  </data>
   <data name="outboundDetour" xml:space="preserve">
     <value>[{"protocol":"blackhole","settings":{},"tag":"blocked"}]</value>
   </data>
