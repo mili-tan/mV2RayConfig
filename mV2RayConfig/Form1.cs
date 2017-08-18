@@ -139,6 +139,13 @@ namespace mV2RayConfig
                 configJson["routing"] = JObject.Parse(routingStr);
             }
 
+            if (checkBoxHttpFake.Checked)
+            {
+                stream["network"] = "tcp";
+                stream["tcpSettings"] = JObject.Parse(httpFakeStr);
+                configJson["streamSettings"] = stream;
+            }
+
             return MyJson.FormatJsonString(configJson.ToString());
         }
 

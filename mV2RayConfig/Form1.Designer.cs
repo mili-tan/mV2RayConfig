@@ -57,6 +57,7 @@
             this.checkBoxManyUser = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.checkBoxRouting = new System.Windows.Forms.CheckBox();
+            this.checkBoxHttpFake = new System.Windows.Forms.CheckBox();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -174,7 +175,7 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 66);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
             this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
             this.comboBoxLogLevel.TabIndex = 6;
@@ -448,12 +449,24 @@
             this.checkBoxRouting.Checked = true;
             this.checkBoxRouting.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxRouting.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.checkBoxRouting.Location = new System.Drawing.Point(564, 445);
+            this.checkBoxRouting.Location = new System.Drawing.Point(564, 440);
             this.checkBoxRouting.Name = "checkBoxRouting";
             this.checkBoxRouting.Size = new System.Drawing.Size(203, 24);
             this.checkBoxRouting.TabIndex = 7;
             this.checkBoxRouting.Text = "启用路由规则 屏蔽内网访问";
             this.checkBoxRouting.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxHttpFake
+            // 
+            this.checkBoxHttpFake.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxHttpFake.AutoSize = true;
+            this.checkBoxHttpFake.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxHttpFake.Location = new System.Drawing.Point(564, 461);
+            this.checkBoxHttpFake.Name = "checkBoxHttpFake";
+            this.checkBoxHttpFake.Size = new System.Drawing.Size(117, 24);
+            this.checkBoxHttpFake.TabIndex = 8;
+            this.checkBoxHttpFake.Text = "启用Http伪装";
+            this.checkBoxHttpFake.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -461,6 +474,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.checkBoxHttpFake);
             this.Controls.Add(this.checkBoxRouting);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -519,6 +533,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.CheckBox checkBoxRouting;
+        private System.Windows.Forms.CheckBox checkBoxHttpFake;
     }
 }
 
