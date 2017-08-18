@@ -80,6 +80,7 @@
             this.richTextBoxConfig.Size = new System.Drawing.Size(408, 585);
             this.richTextBoxConfig.TabIndex = 0;
             this.richTextBoxConfig.Text = "";
+            this.richTextBoxConfig.WordWrap = false;
             // 
             // buttonNewGen
             // 
