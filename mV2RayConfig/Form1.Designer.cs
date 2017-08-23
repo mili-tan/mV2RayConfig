@@ -58,6 +58,7 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.checkBoxRouting = new System.Windows.Forms.CheckBox();
             this.checkBoxHttpFake = new System.Windows.Forms.CheckBox();
+            this.editLink = new System.Windows.Forms.Label();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -469,12 +470,26 @@
             this.checkBoxHttpFake.Text = "启用Http伪装";
             this.checkBoxHttpFake.UseVisualStyleBackColor = true;
             // 
+            // editLink
+            // 
+            this.editLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.editLink.AutoSize = true;
+            this.editLink.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.editLink.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.editLink.Location = new System.Drawing.Point(680, 462);
+            this.editLink.Name = "editLink";
+            this.editLink.Size = new System.Drawing.Size(37, 20);
+            this.editLink.TabIndex = 9;
+            this.editLink.Text = "编辑";
+            this.editLink.Click += new System.EventHandler(this.editLink_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.editLink);
             this.Controls.Add(this.checkBoxHttpFake);
             this.Controls.Add(this.checkBoxRouting);
             this.Controls.Add(this.buttonSave);
@@ -485,6 +500,7 @@
             this.Controls.Add(this.buttonNewGen);
             this.Controls.Add(this.richTextBoxConfig);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "V2RayConfig";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelLog.ResumeLayout(false);
@@ -535,6 +551,7 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.CheckBox checkBoxRouting;
         private System.Windows.Forms.CheckBox checkBoxHttpFake;
+        private System.Windows.Forms.Label editLink;
     }
 }
 

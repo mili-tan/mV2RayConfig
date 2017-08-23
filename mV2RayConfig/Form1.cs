@@ -165,5 +165,10 @@ namespace mV2RayConfig
                 File.WriteAllText(saveFileDialog.FileName, richTextBoxConfig.Text);
             }
         }
+
+        private void editLink_Click(object sender, EventArgs e)
+        {
+            new EditForm().ShowDialog();
+        }
     }
 }
