@@ -20,13 +20,13 @@ namespace mV2RayConfig
 
         private void EditForm_Load(object sender, EventArgs e)
         {
-            richTextBoxConfig.Text = MyJson.FormatJsonString(httpFakeStr);
+            richTextBoxConfig.Text = MyJson.FormatJsonString(HttpFakeStr);
             MaximizeBox = false;
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            httpFakeStr = richTextBoxConfig.Text;
+            HttpFakeStr = richTextBoxConfig.Text;
             Close();
         }
     }

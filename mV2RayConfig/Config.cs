@@ -48,10 +48,10 @@ namespace mV2RayConfig
             public int alterId { get; set; }
         }
 
-        public static string httpFakeStr = Resource.httpFake;
-        public static string routingStr = Resource.routing;
-        public static string outboundDetourStr = Resource.outboundDetour;
-        public static string mKcpStr = Resource.mKCP;
+        public static string HttpFakeStr = Resource.httpFake;
+        public static string RoutingStr = Resource.routing;
+        public static string OutboundDetourStr = Resource.outboundDetour;
+        public static string MKcpStr = Resource.mKCP;
 
     }
 }

@@ -133,23 +133,23 @@ namespace mV2RayConfig
             JObject configJson = JObject.FromObject(serverInfo);
             JObject stream = new JObject();
 
-            configJson["outboundDetour"] = JArray.Parse(outboundDetourStr);
+            configJson["outboundDetour"] = JArray.Parse(OutboundDetourStr);
             if (checkBoxRouting.Checked)
             {
-                configJson["routing"] = JObject.Parse(routingStr);
+                configJson["routing"] = JObject.Parse(RoutingStr);
             }
 
             if (checkBoxHttpFake.Checked)
             {
                 stream["network"] = "tcp";
-                stream["tcpSettings"] = JObject.Parse(httpFakeStr);
+                stream["tcpSettings"] = JObject.Parse(HttpFakeStr);
                 configJson["streamSettings"] = stream;
             }
 
             if (checkBoxKCP.Checked)
             {
                 stream["network"] = "kcp";
-                stream["tcpSettings"] = JObject.Parse(mKcpStr);
+                stream["tcpSettings"] = JObject.Parse(MKcpStr);
                 configJson["streamSettings"] = stream;
             }
 
@@ -167,6 +167,13 @@ namespace mV2RayConfig
             return Guid.NewGuid().ToString();
         }
 
+        private void resetEnabled()
+        {
+            checkBoxHttpFake.Enabled = true;
+            checkBoxWS.Enabled = true;
+            checkBoxKCP.Enabled = true;
+        }
+
         private void buttonSave_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -182,6 +189,45 @@ namespace mV2RayConfig
         private void editLink_Click(object sender, EventArgs e)
         {
             new EditForm().ShowDialog();
+        }
+
+        private void checkBoxHttpFake_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxHttpFake.Checked)
+            {
+                checkBoxWS.Enabled = false;
+                checkBoxKCP.Enabled = false;
+            }
+            else
+            {
+                resetEnabled();
+            }
+        }
+
+        private void checkBoxKCP_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxKCP.Checked)
+            {
+                checkBoxWS.Enabled = false;
+                checkBoxHttpFake.Enabled = false;
+            }
+            else
+            {
+                resetEnabled();
+            }
+        }
+
+        private void checkBoxWS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxWS.Checked)
+            {
+                checkBoxHttpFake.Enabled = false;
+                checkBoxKCP.Enabled = false;
+            }
+            else
+            {
+                resetEnabled();
+            }
         }
     }
 }

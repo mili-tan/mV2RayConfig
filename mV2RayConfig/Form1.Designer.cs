@@ -471,6 +471,7 @@
             this.checkBoxHttpFake.TabIndex = 8;
             this.checkBoxHttpFake.Text = "启用Http伪装";
             this.checkBoxHttpFake.UseVisualStyleBackColor = true;
+            this.checkBoxHttpFake.CheckedChanged += new System.EventHandler(this.checkBoxHttpFake_CheckedChanged);
             // 
             // editLink
             // 
@@ -496,6 +497,7 @@
             this.checkBoxKCP.TabIndex = 10;
             this.checkBoxKCP.Text = "启用mKCP";
             this.checkBoxKCP.UseVisualStyleBackColor = true;
+            this.checkBoxKCP.CheckedChanged += new System.EventHandler(this.checkBoxKCP_CheckedChanged);
             // 
             // checkBoxWS
             // 
@@ -508,6 +510,7 @@
             this.checkBoxWS.TabIndex = 11;
             this.checkBoxWS.Text = "启用WebSocket";
             this.checkBoxWS.UseVisualStyleBackColor = true;
+            this.checkBoxWS.CheckedChanged += new System.EventHandler(this.checkBoxWS_CheckedChanged);
             // 
             // Form1
             // 
