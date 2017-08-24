@@ -60,6 +60,7 @@
             this.checkBoxHttpFake = new System.Windows.Forms.CheckBox();
             this.editLink = new System.Windows.Forms.Label();
             this.checkBoxKCP = new System.Windows.Forms.CheckBox();
+            this.checkBoxWS = new System.Windows.Forms.CheckBox();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -496,12 +497,25 @@
             this.checkBoxKCP.Text = "启用mKCP";
             this.checkBoxKCP.UseVisualStyleBackColor = true;
             // 
+            // checkBoxWS
+            // 
+            this.checkBoxWS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxWS.AutoSize = true;
+            this.checkBoxWS.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxWS.Location = new System.Drawing.Point(564, 503);
+            this.checkBoxWS.Name = "checkBoxWS";
+            this.checkBoxWS.Size = new System.Drawing.Size(135, 24);
+            this.checkBoxWS.TabIndex = 11;
+            this.checkBoxWS.Text = "启用WebSocket";
+            this.checkBoxWS.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.checkBoxWS);
             this.Controls.Add(this.checkBoxKCP);
             this.Controls.Add(this.editLink);
             this.Controls.Add(this.checkBoxHttpFake);
@@ -567,6 +581,7 @@
         private System.Windows.Forms.CheckBox checkBoxHttpFake;
         private System.Windows.Forms.Label editLink;
         private System.Windows.Forms.CheckBox checkBoxKCP;
+        private System.Windows.Forms.CheckBox checkBoxWS;
     }
 }
 

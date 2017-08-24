@@ -153,6 +153,12 @@ namespace mV2RayConfig
                 configJson["streamSettings"] = stream;
             }
 
+            if (checkBoxWS.Checked)
+            {
+                stream["network"] = "ws";
+                configJson["streamSettings"] = stream;
+            }
+
             return MyJson.FormatJsonString(configJson.ToString());
         }
 
