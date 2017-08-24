@@ -51,6 +51,7 @@ namespace mV2RayConfig
         public static string httpFakeStr = Resource.httpFake;
         public static string routingStr = Resource.routing;
         public static string outboundDetourStr = Resource.outboundDetour;
+        public static string mKcpStr = Resource.mKCP;
 
     }
 }

@@ -59,6 +59,7 @@
             this.checkBoxRouting = new System.Windows.Forms.CheckBox();
             this.checkBoxHttpFake = new System.Windows.Forms.CheckBox();
             this.editLink = new System.Windows.Forms.Label();
+            this.checkBoxKCP = new System.Windows.Forms.CheckBox();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -177,7 +178,7 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 66);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
             this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
             this.comboBoxLogLevel.TabIndex = 6;
@@ -483,12 +484,25 @@
             this.editLink.Text = "编辑";
             this.editLink.Click += new System.EventHandler(this.editLink_Click);
             // 
+            // checkBoxKCP
+            // 
+            this.checkBoxKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxKCP.AutoSize = true;
+            this.checkBoxKCP.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxKCP.Location = new System.Drawing.Point(564, 482);
+            this.checkBoxKCP.Name = "checkBoxKCP";
+            this.checkBoxKCP.Size = new System.Drawing.Size(99, 24);
+            this.checkBoxKCP.TabIndex = 10;
+            this.checkBoxKCP.Text = "启用mKCP";
+            this.checkBoxKCP.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.checkBoxKCP);
             this.Controls.Add(this.editLink);
             this.Controls.Add(this.checkBoxHttpFake);
             this.Controls.Add(this.checkBoxRouting);
@@ -552,6 +566,7 @@
         private System.Windows.Forms.CheckBox checkBoxRouting;
         private System.Windows.Forms.CheckBox checkBoxHttpFake;
         private System.Windows.Forms.Label editLink;
+        private System.Windows.Forms.CheckBox checkBoxKCP;
     }
 }
 

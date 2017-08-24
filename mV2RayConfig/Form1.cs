@@ -146,6 +146,13 @@ namespace mV2RayConfig
                 configJson["streamSettings"] = stream;
             }
 
+            if (checkBoxKCP.Checked)
+            {
+                stream["network"] = "kcp";
+                stream["tcpSettings"] = JObject.Parse(mKcpStr);
+                configJson["streamSettings"] = stream;
+            }
+
             return MyJson.FormatJsonString(configJson.ToString());
         }
 

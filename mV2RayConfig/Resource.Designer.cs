@@ -70,6 +70,15 @@ namespace mV2RayConfig {
         }
         
         /// <summary>
+        ///   查找类似 {&quot;mtu&quot;:1350,&quot;tti&quot;:20,&quot;uplinkCapacity&quot;:5,&quot;downlinkCapacity&quot;:100,&quot;congestion&quot;:false,&quot;readBufferSize&quot;:1,&quot;writeBufferSize&quot;:1,&quot;header&quot;:{&quot;type&quot;:&quot;none&quot;}} 的本地化字符串。
+        /// </summary>
+        public static string mKCP {
+            get {
+                return ResourceManager.GetString("mKCP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 [{&quot;protocol&quot;:&quot;blackhole&quot;,&quot;settings&quot;:{},&quot;tag&quot;:&quot;blocked&quot;}] 的本地化字符串。
         /// </summary>
         public static string outboundDetour {
