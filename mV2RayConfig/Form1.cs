@@ -149,7 +149,7 @@ namespace mV2RayConfig
             if (checkBoxKCP.Checked)
             {
                 stream["network"] = "kcp";
-                stream["tcpSettings"] = JObject.Parse(MKcpStr);
+                stream["kcpSettings"] = JObject.Parse(MKcpStr);
                 configJson["streamSettings"] = stream;
             }
 
@@ -160,9 +160,15 @@ namespace mV2RayConfig
             }
             if (checkBoxTLS.Checked)
             {
+                stream["network"] = "tcp";
                 stream["security"] = "tls";
                 JObject tlsSet = new JObject();
-                tlsSet["certificates"] = new JArray();
+                JObject certSet = new JObject();
+                certSet["certificateFile"] = CertificateFile;
+                certSet["keyFile"] = KeyFile;
+                JArray certificatesArray = new JArray();
+                certificatesArray.Add(certSet);
+                tlsSet["certificates"] = certificatesArray;
                 stream["tlsSettings"] = tlsSet;
                 configJson["streamSettings"] = stream;
             }

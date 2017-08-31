@@ -52,6 +52,7 @@ namespace mV2RayConfig
         public static string RoutingStr = Resource.routing;
         public static string OutboundDetourStr = Resource.outboundDetour;
         public static string MKcpStr = Resource.mKCP;
-
+        public static string CertificateFile = @"/etc/v2ray/v2ray.crt";
+        public static string KeyFile = @"/etc/v2ray/v2ray.key";
     }
 }
