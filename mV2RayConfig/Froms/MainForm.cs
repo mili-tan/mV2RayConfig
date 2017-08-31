@@ -7,9 +7,9 @@ using static mV2RayConfig.Config;
 
 namespace mV2RayConfig
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             comboBoxLogLevel.SelectedIndex = 2;
@@ -168,6 +168,7 @@ namespace mV2RayConfig
                 certSet["keyFile"] = KeyFile;
                 JArray certificatesArray = new JArray();
                 certificatesArray.Add(certSet);
+                tlsSet["serverName"] = ServerName;
                 tlsSet["certificates"] = certificatesArray;
                 stream["tlsSettings"] = tlsSet;
                 configJson["streamSettings"] = stream;
