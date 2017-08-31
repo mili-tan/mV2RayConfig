@@ -161,6 +161,10 @@ namespace mV2RayConfig
             if (checkBoxTLS.Checked)
             {
                 stream["security"] = "tls";
+                JObject tlsSet = new JObject();
+                tlsSet["certificates"] = new JArray();
+                stream["tlsSettings"] = tlsSet;
+                configJson["streamSettings"] = stream;
             }
 
             return MyJson.FormatJsonString(configJson.ToString());
