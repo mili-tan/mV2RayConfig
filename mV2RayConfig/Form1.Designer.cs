@@ -61,6 +61,7 @@
             this.editLink = new System.Windows.Forms.Label();
             this.checkBoxKCP = new System.Windows.Forms.CheckBox();
             this.checkBoxWS = new System.Windows.Forms.CheckBox();
+            this.checkBoxTLS = new System.Windows.Forms.CheckBox();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -179,7 +180,7 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 66);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
             this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
             this.comboBoxLogLevel.TabIndex = 6;
@@ -512,12 +513,25 @@
             this.checkBoxWS.UseVisualStyleBackColor = true;
             this.checkBoxWS.CheckedChanged += new System.EventHandler(this.checkBoxWS_CheckedChanged);
             // 
+            // checkBoxTLS
+            // 
+            this.checkBoxTLS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxTLS.AutoSize = true;
+            this.checkBoxTLS.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxTLS.Location = new System.Drawing.Point(564, 524);
+            this.checkBoxTLS.Name = "checkBoxTLS";
+            this.checkBoxTLS.Size = new System.Drawing.Size(166, 24);
+            this.checkBoxTLS.TabIndex = 12;
+            this.checkBoxTLS.Text = "启用TLS (传输层安全)";
+            this.checkBoxTLS.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.checkBoxTLS);
             this.Controls.Add(this.checkBoxWS);
             this.Controls.Add(this.checkBoxKCP);
             this.Controls.Add(this.editLink);
@@ -585,6 +599,7 @@
         private System.Windows.Forms.Label editLink;
         private System.Windows.Forms.CheckBox checkBoxKCP;
         private System.Windows.Forms.CheckBox checkBoxWS;
+        private System.Windows.Forms.CheckBox checkBoxTLS;
     }
 }
 

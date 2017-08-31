@@ -158,6 +158,10 @@ namespace mV2RayConfig
                 stream["network"] = "ws";
                 configJson["streamSettings"] = stream;
             }
+            if (checkBoxTLS.Checked)
+            {
+                stream["security"] = "tls";
+            }
 
             return MyJson.FormatJsonString(configJson.ToString());
         }
