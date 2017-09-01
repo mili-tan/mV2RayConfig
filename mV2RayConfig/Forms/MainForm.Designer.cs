@@ -524,8 +524,9 @@
             this.checkBoxTLS.TabIndex = 12;
             this.checkBoxTLS.Text = "启用TLS (传输层安全)";
             this.checkBoxTLS.UseVisualStyleBackColor = true;
+            this.checkBoxTLS.CheckedChanged += new System.EventHandler(this.checkBoxTLS_CheckedChanged);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -544,7 +545,7 @@
             this.Controls.Add(this.panelLog);
             this.Controls.Add(this.buttonNewGen);
             this.Controls.Add(this.richTextBoxConfig);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "V2RayConfig";
             this.Load += new System.EventHandler(this.Form1_Load);

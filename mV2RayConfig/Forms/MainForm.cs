@@ -244,5 +244,13 @@ namespace mV2RayConfig
                 resetEnabled();
             }
         }
+
+        private void checkBoxTLS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxTLS.Checked)
+            {
+                new TLSForm().ShowDialog();
+            }
+        }
     }
 }
