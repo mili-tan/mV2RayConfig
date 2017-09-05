@@ -225,6 +225,7 @@ namespace mV2RayConfig
             {
                 checkBoxWS.Enabled = false;
                 checkBoxHttpFake.Enabled = false;
+                checkBoxTLS.Enabled = false;
             }
             else
             {
@@ -238,6 +239,7 @@ namespace mV2RayConfig
             {
                 checkBoxHttpFake.Enabled = false;
                 checkBoxKCP.Enabled = false;
+                checkBoxTLS.Enabled = false;
             }
             else
             {
@@ -249,7 +251,13 @@ namespace mV2RayConfig
         {
             if (checkBoxTLS.Checked)
             {
+                checkBoxWS.Enabled = false;
+                checkBoxKCP.Enabled = false;
                 new TLSForm().ShowDialog();
+            }
+            else
+            {
+                resetEnabled();
             }
         }
     }
