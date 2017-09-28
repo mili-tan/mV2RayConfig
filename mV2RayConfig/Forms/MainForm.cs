@@ -264,7 +264,7 @@ namespace mV2RayConfig
 
         private void buttonUserConfig_Click(object sender, EventArgs e)
         {
-            new ClientConfigForm().ShowDialog();
+            new ClientConfigForm().Show();
         }
     }
 }

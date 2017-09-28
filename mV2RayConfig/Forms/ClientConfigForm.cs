@@ -24,6 +24,7 @@ namespace mV2RayConfig.Forms
         Inbound inbound = new Inbound();
         InBoundSetting inBoundSetting = new InBoundSetting();
         VmessClients clients = new VmessClients();
+        Vnext vnext = new Vnext();
         Log log = new Log();
 
         private void ClientConfigForm_Load(object sender, EventArgs e)
@@ -46,11 +47,21 @@ namespace mV2RayConfig.Forms
             serverInfo.inbound = inbound;
 
             outbound.protocol = "vmess";
-            clients.id = "";
+            vnext.address = "serveraddr.com";
+            vnext.port = 2333;
+            clients.id = "b831381d-6324-4d53-ad4f-8cda48b30811";
             clients.alterId = 32;
+            JArray clientsArray = new JArray();
+            JObject clientsJson = JObject.FromObject(clients);
+            clientsJson.Remove("level");
+            clientsArray.Add(clientsJson);
+            vnext.users = clientsArray;
 
-            JArray centArray = new JArray();
-            centArray.Add(JObject.FromObject(clients));
+            JObject vnextSetJson = new JObject();
+            vnextSetJson["vnext"] = JArray.Parse(string.Format("[{0}]", JObject.FromObject(vnext).ToString()));
+            outbound.settings = vnextSetJson;
+
+            serverInfo.outbound = outbound;
 
             JObject configJson = JObject.FromObject(serverInfo);
             return MyJson.FormatJsonString(configJson.ToString());
