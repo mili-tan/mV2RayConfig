@@ -54,6 +54,7 @@ namespace mV2RayConfig.Forms
             JArray clientsArray = new JArray();
             JObject clientsJson = JObject.FromObject(clients);
             clientsJson.Remove("level");
+            clientsJson["security"] = "chacha20-poly1305";
             clientsArray.Add(clientsJson);
             vnext.users = clientsArray;
 
