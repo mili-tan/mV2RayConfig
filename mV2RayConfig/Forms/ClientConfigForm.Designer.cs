@@ -55,6 +55,7 @@
             this.Name = "ClientConfigForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ClientConfig";
+            this.Load += new System.EventHandler(this.ClientConfigForm_Load);
             this.ResumeLayout(false);
 
         }
