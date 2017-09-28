@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using static mV2RayConfig.Config;
+using mV2RayConfig.Forms;
 
 namespace mV2RayConfig
 {
@@ -259,6 +260,11 @@ namespace mV2RayConfig
             {
                 resetEnabled();
             }
+        }
+
+        private void buttonUserConfig_Click(object sender, EventArgs e)
+        {
+            new ClientConfigForm().ShowDialog();
         }
     }
 }

@@ -62,6 +62,7 @@
             this.checkBoxKCP = new System.Windows.Forms.CheckBox();
             this.checkBoxWS = new System.Windows.Forms.CheckBox();
             this.checkBoxTLS = new System.Windows.Forms.CheckBox();
+            this.buttonUserConfig = new System.Windows.Forms.Button();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -526,12 +527,25 @@
             this.checkBoxTLS.UseVisualStyleBackColor = true;
             this.checkBoxTLS.CheckedChanged += new System.EventHandler(this.checkBoxTLS_CheckedChanged);
             // 
+            // buttonUserConfig
+            // 
+            this.buttonUserConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonUserConfig.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonUserConfig.Location = new System.Drawing.Point(563, 562);
+            this.buttonUserConfig.Name = "buttonUserConfig";
+            this.buttonUserConfig.Size = new System.Drawing.Size(115, 29);
+            this.buttonUserConfig.TabIndex = 13;
+            this.buttonUserConfig.Text = "生成客户端配置";
+            this.buttonUserConfig.UseVisualStyleBackColor = true;
+            this.buttonUserConfig.Click += new System.EventHandler(this.buttonUserConfig_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.buttonUserConfig);
             this.Controls.Add(this.checkBoxTLS);
             this.Controls.Add(this.checkBoxWS);
             this.Controls.Add(this.checkBoxKCP);
@@ -601,6 +615,7 @@
         private System.Windows.Forms.CheckBox checkBoxKCP;
         private System.Windows.Forms.CheckBox checkBoxWS;
         private System.Windows.Forms.CheckBox checkBoxTLS;
+        private System.Windows.Forms.Button buttonUserConfig;
     }
 }
 
