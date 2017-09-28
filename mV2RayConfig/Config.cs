@@ -48,6 +48,13 @@ namespace mV2RayConfig
             public int alterId { get; set; }
         }
 
+        public class Vnext
+        {
+            public string address { get; set; }
+            public int port { get; set; }
+            public JArray users { get; set; }
+        }
+
         public static string HttpFakeStr = Resource.httpFake;
         public static string RoutingStr = Resource.routing;
         public static string OutboundDetourStr = Resource.outboundDetour;

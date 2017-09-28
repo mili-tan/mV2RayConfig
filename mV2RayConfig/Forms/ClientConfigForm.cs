@@ -45,6 +45,13 @@ namespace mV2RayConfig.Forms
             inbound.settings = setJson;
             serverInfo.inbound = inbound;
 
+            outbound.protocol = "vmess";
+            clients.id = "";
+            clients.alterId = 32;
+
+            JArray centArray = new JArray();
+            centArray.Add(JObject.FromObject(clients));
+
             JObject configJson = JObject.FromObject(serverInfo);
             return MyJson.FormatJsonString(configJson.ToString());
         }
