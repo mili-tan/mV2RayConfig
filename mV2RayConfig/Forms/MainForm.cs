@@ -188,6 +188,7 @@ namespace mV2RayConfig
             checkBoxHttpFake.Enabled = true;
             checkBoxWS.Enabled = true;
             checkBoxKCP.Enabled = true;
+            checkBoxTLS.Enabled = true;
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
