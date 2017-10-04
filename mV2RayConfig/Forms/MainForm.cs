@@ -265,7 +265,10 @@ namespace mV2RayConfig
 
         private void buttonUserConfig_Click(object sender, EventArgs e)
         {
-            new ClientConfigForm().Show();
+            string uuid = clients.id;
+            int id = clients.alterId;
+            int port = inbound.port;
+            new ClientConfigForm(uuid,id,port).Show();
         }
     }
 }

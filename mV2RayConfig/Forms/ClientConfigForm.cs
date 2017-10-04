@@ -14,9 +14,16 @@ namespace mV2RayConfig.Forms
 {
     public partial class ClientConfigForm : Form
     {
-        public ClientConfigForm()
+        string mUUID;
+        int aID;
+        int mPort;
+
+        public ClientConfigForm(string UUID,int alterId,int port)
         {
             InitializeComponent();
+            mUUID = UUID;
+            aID = alterId;
+            mPort = port;
         }
 
         ServerInfo serverInfo = new ServerInfo();
@@ -48,9 +55,9 @@ namespace mV2RayConfig.Forms
 
             outbound.protocol = "vmess";
             vnext.address = "serveraddr.com";
-            vnext.port = 2333;
-            clients.id = "b831381d-6324-4d53-ad4f-8cda48b30811";
-            clients.alterId = 32;
+            vnext.port = mPort;
+            clients.id = mUUID;
+            clients.alterId = aID;
             JArray clientsArray = new JArray();
             JObject clientsJson = JObject.FromObject(clients);
             clientsJson.Remove("level");
