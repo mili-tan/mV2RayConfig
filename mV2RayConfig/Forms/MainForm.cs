@@ -52,12 +52,14 @@ namespace mV2RayConfig
                 listBoxManyUser.Enabled = true;
                 buttonAdd.Enabled = true;
                 buttonDel.Enabled = true;
+                buttonUserConfig.Enabled = false;
             }
             else
             {
                 listBoxManyUser.Enabled = false;
                 buttonAdd.Enabled = false;
                 buttonDel.Enabled = false;
+                buttonUserConfig.Enabled = true;
             }
         }
 
