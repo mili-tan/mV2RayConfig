@@ -49,7 +49,7 @@ namespace mV2RayConfig.Forms
             log.loglevel = "debug";
             serverInfo.log = log;
 
-            inbound.port = 1080;
+            inbound.port = Convert.ToInt32(upDownPort.Value);
             inbound.protocol = "socks";
             JObject setJson = new JObject();
             setJson["auth"] = "noauth";
