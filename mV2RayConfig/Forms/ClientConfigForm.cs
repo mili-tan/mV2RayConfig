@@ -24,6 +24,8 @@ namespace mV2RayConfig.Forms
             mUUID = UUID;
             aID = alterId;
             mPort = port;
+
+            comboBoxProtocol.SelectedIndex = 0;
         }
 
         ServerInfo serverInfo = new ServerInfo();
@@ -53,8 +55,8 @@ namespace mV2RayConfig.Forms
             inbound.settings = setJson;
             serverInfo.inbound = inbound;
 
-            outbound.protocol = "vmess";
-            vnext.address = "serveraddr.com";
+            outbound.protocol = comboBoxProtocol.Text;
+            vnext.address = textBoxHostName.Text;
             vnext.port = mPort;
             clients.id = mUUID;
             clients.alterId = aID;
@@ -73,6 +75,11 @@ namespace mV2RayConfig.Forms
 
             JObject configJson = JObject.FromObject(serverInfo);
             return MyJson.FormatJsonString(configJson.ToString());
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

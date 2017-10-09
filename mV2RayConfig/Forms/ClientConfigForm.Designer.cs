@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.richTextBoxConfig = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxHostName = new System.Windows.Forms.TextBox();
+            this.labelHostName = new System.Windows.Forms.Label();
+            this.labelProtocol = new System.Windows.Forms.Label();
+            this.comboBoxProtocol = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBoxConfig
@@ -46,16 +52,80 @@
             this.richTextBoxConfig.Text = "";
             this.richTextBoxConfig.WordWrap = false;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.10945F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.89055F));
+            this.tableLayoutPanel1.Controls.Add(this.labelHostName, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxHostName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelProtocol, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.comboBoxProtocol, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 397);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 100);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // textBoxHostName
+            // 
+            this.textBoxHostName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxHostName.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.textBoxHostName.Location = new System.Drawing.Point(116, 35);
+            this.textBoxHostName.Name = "textBoxHostName";
+            this.textBoxHostName.Size = new System.Drawing.Size(283, 25);
+            this.textBoxHostName.TabIndex = 9;
+            this.textBoxHostName.Text = "example.com";
+            // 
+            // labelHostName
+            // 
+            this.labelHostName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelHostName.AutoSize = true;
+            this.labelHostName.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.labelHostName.Location = new System.Drawing.Point(3, 38);
+            this.labelHostName.Name = "labelHostName";
+            this.labelHostName.Size = new System.Drawing.Size(107, 20);
+            this.labelHostName.TabIndex = 10;
+            this.labelHostName.Text = "域名";
+            // 
+            // labelProtocol
+            // 
+            this.labelProtocol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelProtocol.AutoSize = true;
+            this.labelProtocol.Location = new System.Drawing.Point(3, 8);
+            this.labelProtocol.Name = "labelProtocol";
+            this.labelProtocol.Size = new System.Drawing.Size(107, 15);
+            this.labelProtocol.TabIndex = 11;
+            this.labelProtocol.Text = "服务类型";
+            // 
+            // comboBoxProtocol
+            // 
+            this.comboBoxProtocol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxProtocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProtocol.FormattingEnabled = true;
+            this.comboBoxProtocol.Items.AddRange(new object[] {
+            "vmess"});
+            this.comboBoxProtocol.Location = new System.Drawing.Point(116, 4);
+            this.comboBoxProtocol.Name = "comboBoxProtocol";
+            this.comboBoxProtocol.Size = new System.Drawing.Size(283, 23);
+            this.comboBoxProtocol.TabIndex = 12;
+            // 
             // ClientConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 541);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.richTextBoxConfig);
             this.Name = "ClientConfigForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientConfig";
             this.Load += new System.EventHandler(this.ClientConfigForm_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +133,10 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox richTextBoxConfig;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox textBoxHostName;
+        private System.Windows.Forms.Label labelHostName;
+        private System.Windows.Forms.Label labelProtocol;
+        private System.Windows.Forms.ComboBox comboBoxProtocol;
     }
 }

@@ -270,7 +270,7 @@ namespace mV2RayConfig
             string uuid = clients.id;
             int id = clients.alterId;
             int port = inbound.port;
-            new ClientConfigForm(uuid,id,port).Show();
+            new ClientConfigForm(uuid, id, port).Show();
         }
     }
 }
