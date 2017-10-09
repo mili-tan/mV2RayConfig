@@ -26,6 +26,7 @@ namespace mV2RayConfig.Forms
             mPort = port;
 
             comboBoxProtocol.SelectedIndex = 0;
+            comboBoxSecurity.SelectedIndex = 0;
         }
 
         ServerInfo serverInfo = new ServerInfo();
@@ -63,7 +64,7 @@ namespace mV2RayConfig.Forms
             JArray clientsArray = new JArray();
             JObject clientsJson = JObject.FromObject(clients);
             clientsJson.Remove("level");
-            clientsJson["security"] = "chacha20-poly1305";
+            clientsJson["security"] = comboBoxSecurity.Text;
             clientsArray.Add(clientsJson);
             vnext.users = clientsArray;
 
@@ -77,9 +78,9 @@ namespace mV2RayConfig.Forms
             return MyJson.FormatJsonString(configJson.ToString());
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void buttonNewGen_Click(object sender, EventArgs e)
         {
-
+            richTextBoxConfig.Text = configGen();
         }
     }
 }
