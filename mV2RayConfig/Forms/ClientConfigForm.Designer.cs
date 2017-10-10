@@ -30,15 +30,16 @@
         {
             this.richTextBoxConfig = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxHostName = new System.Windows.Forms.TextBox();
+            this.labelLocalPort = new System.Windows.Forms.Label();
+            this.labelSecurity = new System.Windows.Forms.Label();
             this.labelHostName = new System.Windows.Forms.Label();
+            this.textBoxHostName = new System.Windows.Forms.TextBox();
             this.labelProtocol = new System.Windows.Forms.Label();
             this.comboBoxProtocol = new System.Windows.Forms.ComboBox();
-            this.labelSecurity = new System.Windows.Forms.Label();
             this.comboBoxSecurity = new System.Windows.Forms.ComboBox();
-            this.buttonNewGen = new System.Windows.Forms.Button();
-            this.labelLocalPort = new System.Windows.Forms.Label();
             this.upDownPort = new System.Windows.Forms.NumericUpDown();
+            this.buttonNewGen = new System.Windows.Forms.Button();
+            this.checkBoxMux = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
             this.SuspendLayout();
@@ -72,25 +73,39 @@
             this.tableLayoutPanel1.Controls.Add(this.comboBoxProtocol, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxSecurity, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.upDownPort, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.checkBoxMux, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 397);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 122);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 154);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // textBoxHostName
+            // labelLocalPort
             // 
-            this.textBoxHostName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxHostName.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.textBoxHostName.Location = new System.Drawing.Point(115, 32);
-            this.textBoxHostName.Name = "textBoxHostName";
-            this.textBoxHostName.Size = new System.Drawing.Size(284, 25);
-            this.textBoxHostName.TabIndex = 9;
-            this.textBoxHostName.Text = "example.com";
+            this.labelLocalPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelLocalPort.AutoSize = true;
+            this.labelLocalPort.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.labelLocalPort.Location = new System.Drawing.Point(3, 94);
+            this.labelLocalPort.Name = "labelLocalPort";
+            this.labelLocalPort.Size = new System.Drawing.Size(106, 20);
+            this.labelLocalPort.TabIndex = 15;
+            this.labelLocalPort.Text = "本地端口";
+            // 
+            // labelSecurity
+            // 
+            this.labelSecurity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSecurity.AutoSize = true;
+            this.labelSecurity.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.labelSecurity.Location = new System.Drawing.Point(3, 64);
+            this.labelSecurity.Name = "labelSecurity";
+            this.labelSecurity.Size = new System.Drawing.Size(106, 20);
+            this.labelSecurity.TabIndex = 13;
+            this.labelSecurity.Text = "加密方式";
             // 
             // labelHostName
             // 
@@ -102,6 +117,16 @@
             this.labelHostName.Size = new System.Drawing.Size(106, 20);
             this.labelHostName.TabIndex = 10;
             this.labelHostName.Text = "域名";
+            // 
+            // textBoxHostName
+            // 
+            this.textBoxHostName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxHostName.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.textBoxHostName.Location = new System.Drawing.Point(115, 32);
+            this.textBoxHostName.Name = "textBoxHostName";
+            this.textBoxHostName.Size = new System.Drawing.Size(284, 25);
+            this.textBoxHostName.TabIndex = 9;
+            this.textBoxHostName.Text = "example.com";
             // 
             // labelProtocol
             // 
@@ -125,17 +150,6 @@
             this.comboBoxProtocol.Size = new System.Drawing.Size(284, 23);
             this.comboBoxProtocol.TabIndex = 12;
             // 
-            // labelSecurity
-            // 
-            this.labelSecurity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSecurity.AutoSize = true;
-            this.labelSecurity.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.labelSecurity.Location = new System.Drawing.Point(3, 64);
-            this.labelSecurity.Name = "labelSecurity";
-            this.labelSecurity.Size = new System.Drawing.Size(106, 20);
-            this.labelSecurity.TabIndex = 13;
-            this.labelSecurity.Text = "加密方式";
-            // 
             // comboBoxSecurity
             // 
             this.comboBoxSecurity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -151,33 +165,10 @@
             this.comboBoxSecurity.Size = new System.Drawing.Size(284, 23);
             this.comboBoxSecurity.TabIndex = 14;
             // 
-            // buttonNewGen
-            // 
-            this.buttonNewGen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonNewGen.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonNewGen.Location = new System.Drawing.Point(340, 540);
-            this.buttonNewGen.Name = "buttonNewGen";
-            this.buttonNewGen.Size = new System.Drawing.Size(75, 29);
-            this.buttonNewGen.TabIndex = 3;
-            this.buttonNewGen.Text = "生成";
-            this.buttonNewGen.UseVisualStyleBackColor = true;
-            this.buttonNewGen.Click += new System.EventHandler(this.buttonNewGen_Click);
-            // 
-            // labelLocalPort
-            // 
-            this.labelLocalPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelLocalPort.AutoSize = true;
-            this.labelLocalPort.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.labelLocalPort.Location = new System.Drawing.Point(3, 95);
-            this.labelLocalPort.Name = "labelLocalPort";
-            this.labelLocalPort.Size = new System.Drawing.Size(106, 20);
-            this.labelLocalPort.TabIndex = 15;
-            this.labelLocalPort.Text = "本地端口";
-            // 
             // upDownPort
             // 
             this.upDownPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.upDownPort.Location = new System.Drawing.Point(115, 93);
+            this.upDownPort.Location = new System.Drawing.Point(115, 92);
             this.upDownPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -197,11 +188,35 @@
             0,
             0});
             // 
+            // buttonNewGen
+            // 
+            this.buttonNewGen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNewGen.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonNewGen.Location = new System.Drawing.Point(340, 557);
+            this.buttonNewGen.Name = "buttonNewGen";
+            this.buttonNewGen.Size = new System.Drawing.Size(75, 29);
+            this.buttonNewGen.TabIndex = 3;
+            this.buttonNewGen.Text = "生成";
+            this.buttonNewGen.UseVisualStyleBackColor = true;
+            this.buttonNewGen.Click += new System.EventHandler(this.buttonNewGen_Click);
+            // 
+            // checkBoxMux
+            // 
+            this.checkBoxMux.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxMux.AutoSize = true;
+            this.checkBoxMux.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxMux.Location = new System.Drawing.Point(115, 125);
+            this.checkBoxMux.Name = "checkBoxMux";
+            this.checkBoxMux.Size = new System.Drawing.Size(284, 24);
+            this.checkBoxMux.TabIndex = 17;
+            this.checkBoxMux.Text = "启用Mux.Cool(多路复用)";
+            this.checkBoxMux.UseVisualStyleBackColor = true;
+            // 
             // ClientConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 578);
+            this.ClientSize = new System.Drawing.Size(427, 595);
             this.Controls.Add(this.buttonNewGen);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.richTextBoxConfig);
@@ -229,5 +244,6 @@
         private System.Windows.Forms.Button buttonNewGen;
         private System.Windows.Forms.Label labelLocalPort;
         private System.Windows.Forms.NumericUpDown upDownPort;
+        private System.Windows.Forms.CheckBox checkBoxMux;
     }
 }

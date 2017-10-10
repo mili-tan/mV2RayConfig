@@ -65,7 +65,16 @@ namespace mV2RayConfig.Forms
             vnextSetJson["vnext"] = JArray.Parse(string.Format("[{0}]", JObject.FromObject(vnext).ToString()));
             outbound.settings = vnextSetJson;
 
-            serverInfo.outbound = outbound;
+            JObject outJson = JObject.FromObject(outbound);
+
+            if (checkBoxMux.Checked)
+            {
+                JObject enabled = new JObject();
+                enabled["enabled"] = true;
+                outJson["mux"] = enabled;
+            }
+
+            serverInfo.outbound = outJson;
 
             JObject configJson = JObject.FromObject(serverInfo);
             return MyJson.FormatJsonString(configJson.ToString());
