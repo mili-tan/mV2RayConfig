@@ -15,6 +15,7 @@ namespace mV2RayConfig
             InitializeComponent();
             comboBoxLogLevel.SelectedIndex = 2;
             comboBoxProtocol.SelectedIndex = 0;
+            comboBoxFakeKCP.SelectedIndex = 0;
             textBoxUUID.Text = uuidGen();
         }
 
@@ -152,7 +153,11 @@ namespace mV2RayConfig
             if (checkBoxKCP.Checked)
             {
                 stream["network"] = "kcp";
-                stream["kcpSettings"] = JObject.Parse(MKcpStr);
+                JObject KCPSet = JObject.Parse(MKcpStr);
+                JObject fakeType = new JObject();
+                fakeType["type"] = comboBoxFakeKCP.Text;
+                KCPSet["header"] = fakeType;
+                stream["kcpSettings"] = KCPSet;
                 configJson["streamSettings"] = stream;
             }
 

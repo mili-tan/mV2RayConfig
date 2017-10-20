@@ -63,6 +63,8 @@
             this.checkBoxWS = new System.Windows.Forms.CheckBox();
             this.checkBoxTLS = new System.Windows.Forms.CheckBox();
             this.buttonUserConfig = new System.Windows.Forms.Button();
+            this.labelFakeKCP = new System.Windows.Forms.Label();
+            this.comboBoxFakeKCP = new System.Windows.Forms.ComboBox();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -181,7 +183,7 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 66);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
             this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
             this.comboBoxLogLevel.TabIndex = 6;
@@ -539,12 +541,41 @@
             this.buttonUserConfig.UseVisualStyleBackColor = true;
             this.buttonUserConfig.Click += new System.EventHandler(this.buttonUserConfig_Click);
             // 
+            // labelFakeKCP
+            // 
+            this.labelFakeKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFakeKCP.AutoSize = true;
+            this.labelFakeKCP.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.labelFakeKCP.Location = new System.Drawing.Point(662, 484);
+            this.labelFakeKCP.Name = "labelFakeKCP";
+            this.labelFakeKCP.Size = new System.Drawing.Size(37, 20);
+            this.labelFakeKCP.TabIndex = 14;
+            this.labelFakeKCP.Text = "伪装";
+            // 
+            // comboBoxFakeKCP
+            // 
+            this.comboBoxFakeKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxFakeKCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFakeKCP.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.comboBoxFakeKCP.FormattingEnabled = true;
+            this.comboBoxFakeKCP.Items.AddRange(new object[] {
+            "none",
+            "utp",
+            "srtp",
+            "wechat-video"});
+            this.comboBoxFakeKCP.Location = new System.Drawing.Point(708, 482);
+            this.comboBoxFakeKCP.Name = "comboBoxFakeKCP";
+            this.comboBoxFakeKCP.Size = new System.Drawing.Size(132, 27);
+            this.comboBoxFakeKCP.TabIndex = 15;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(852, 603);
+            this.Controls.Add(this.comboBoxFakeKCP);
+            this.Controls.Add(this.labelFakeKCP);
             this.Controls.Add(this.buttonUserConfig);
             this.Controls.Add(this.checkBoxTLS);
             this.Controls.Add(this.checkBoxWS);
@@ -616,6 +647,8 @@
         private System.Windows.Forms.CheckBox checkBoxWS;
         private System.Windows.Forms.CheckBox checkBoxTLS;
         private System.Windows.Forms.Button buttonUserConfig;
+        private System.Windows.Forms.Label labelFakeKCP;
+        private System.Windows.Forms.ComboBox comboBoxFakeKCP;
     }
 }
 
