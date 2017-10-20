@@ -51,9 +51,6 @@
             this.checkBoxUserLevel = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.listBoxManyUser = new System.Windows.Forms.ListBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonDel = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
             this.checkBoxManyUser = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.checkBoxRouting = new System.Windows.Forms.CheckBox();
@@ -65,6 +62,9 @@
             this.buttonUserConfig = new System.Windows.Forms.Button();
             this.labelFakeKCP = new System.Windows.Forms.Label();
             this.comboBoxFakeKCP = new System.Windows.Forms.ComboBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -364,19 +364,19 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.44552F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.55448F));
-            this.tableLayoutPanel2.Controls.Add(this.listBoxManyUser, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.checkBoxManyUser, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(427, 283);
+            this.tableLayoutPanel2.Controls.Add(this.listBoxManyUser, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(427, 306);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.64151F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.35849F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(413, 159);
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(413, 136);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // listBoxManyUser
@@ -386,53 +386,20 @@
             this.listBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.listBoxManyUser.FormattingEnabled = true;
             this.listBoxManyUser.ItemHeight = 19;
-            this.listBoxManyUser.Location = new System.Drawing.Point(136, 39);
+            this.listBoxManyUser.Location = new System.Drawing.Point(136, 3);
             this.listBoxManyUser.Name = "listBoxManyUser";
-            this.listBoxManyUser.Size = new System.Drawing.Size(274, 117);
+            this.listBoxManyUser.Size = new System.Drawing.Size(274, 130);
             this.listBoxManyUser.TabIndex = 0;
             this.listBoxManyUser.DoubleClick += new System.EventHandler(this.listBoxManyUser_DoubleClick);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.buttonDel);
-            this.panel1.Controls.Add(this.buttonAdd);
-            this.panel1.Location = new System.Drawing.Point(3, 39);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(127, 117);
-            this.panel1.TabIndex = 16;
-            // 
-            // buttonDel
-            // 
-            this.buttonDel.Enabled = false;
-            this.buttonDel.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.buttonDel.Location = new System.Drawing.Point(0, 38);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(126, 29);
-            this.buttonDel.TabIndex = 15;
-            this.buttonDel.Text = "删除用户";
-            this.buttonDel.UseVisualStyleBackColor = true;
-            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Enabled = false;
-            this.buttonAdd.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.buttonAdd.Location = new System.Drawing.Point(0, 3);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(126, 29);
-            this.buttonAdd.TabIndex = 14;
-            this.buttonAdd.Text = "添加用户";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
             // checkBoxManyUser
             // 
-            this.checkBoxManyUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxManyUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxManyUser.AutoSize = true;
             this.checkBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.checkBoxManyUser.Location = new System.Drawing.Point(136, 6);
+            this.checkBoxManyUser.Location = new System.Drawing.Point(563, 279);
             this.checkBoxManyUser.Name = "checkBoxManyUser";
-            this.checkBoxManyUser.Size = new System.Drawing.Size(274, 24);
+            this.checkBoxManyUser.Size = new System.Drawing.Size(101, 24);
             this.checkBoxManyUser.TabIndex = 13;
             this.checkBoxManyUser.Text = "启用多用户";
             this.checkBoxManyUser.UseVisualStyleBackColor = true;
@@ -452,7 +419,7 @@
             // 
             // checkBoxRouting
             // 
-            this.checkBoxRouting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxRouting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxRouting.AutoSize = true;
             this.checkBoxRouting.Checked = true;
             this.checkBoxRouting.CheckState = System.Windows.Forms.CheckState.Checked;
@@ -466,7 +433,7 @@
             // 
             // checkBoxHttpFake
             // 
-            this.checkBoxHttpFake.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxHttpFake.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxHttpFake.AutoSize = true;
             this.checkBoxHttpFake.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.checkBoxHttpFake.Location = new System.Drawing.Point(564, 461);
@@ -479,7 +446,7 @@
             // 
             // editLink
             // 
-            this.editLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.editLink.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.editLink.AutoSize = true;
             this.editLink.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.editLink.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -492,7 +459,7 @@
             // 
             // checkBoxKCP
             // 
-            this.checkBoxKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxKCP.AutoSize = true;
             this.checkBoxKCP.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.checkBoxKCP.Location = new System.Drawing.Point(564, 482);
@@ -505,7 +472,7 @@
             // 
             // checkBoxWS
             // 
-            this.checkBoxWS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxWS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxWS.AutoSize = true;
             this.checkBoxWS.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.checkBoxWS.Location = new System.Drawing.Point(564, 503);
@@ -518,7 +485,7 @@
             // 
             // checkBoxTLS
             // 
-            this.checkBoxTLS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxTLS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxTLS.AutoSize = true;
             this.checkBoxTLS.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.checkBoxTLS.Location = new System.Drawing.Point(564, 524);
@@ -543,10 +510,10 @@
             // 
             // labelFakeKCP
             // 
-            this.labelFakeKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFakeKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFakeKCP.AutoSize = true;
             this.labelFakeKCP.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.labelFakeKCP.Location = new System.Drawing.Point(662, 484);
+            this.labelFakeKCP.Location = new System.Drawing.Point(680, 486);
             this.labelFakeKCP.Name = "labelFakeKCP";
             this.labelFakeKCP.Size = new System.Drawing.Size(37, 20);
             this.labelFakeKCP.TabIndex = 14;
@@ -554,7 +521,7 @@
             // 
             // comboBoxFakeKCP
             // 
-            this.comboBoxFakeKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxFakeKCP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxFakeKCP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFakeKCP.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.comboBoxFakeKCP.FormattingEnabled = true;
@@ -563,10 +530,43 @@
             "utp",
             "srtp",
             "wechat-video"});
-            this.comboBoxFakeKCP.Location = new System.Drawing.Point(708, 482);
+            this.comboBoxFakeKCP.Location = new System.Drawing.Point(723, 482);
             this.comboBoxFakeKCP.Name = "comboBoxFakeKCP";
-            this.comboBoxFakeKCP.Size = new System.Drawing.Size(132, 27);
+            this.comboBoxFakeKCP.Size = new System.Drawing.Size(117, 27);
             this.comboBoxFakeKCP.TabIndex = 15;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Enabled = false;
+            this.buttonAdd.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.buttonAdd.Location = new System.Drawing.Point(0, 3);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(126, 29);
+            this.buttonAdd.TabIndex = 14;
+            this.buttonAdd.Text = "添加用户";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.Enabled = false;
+            this.buttonDel.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.buttonDel.Location = new System.Drawing.Point(0, 38);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(126, 29);
+            this.buttonDel.TabIndex = 15;
+            this.buttonDel.Text = "删除用户";
+            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonDel);
+            this.panel1.Controls.Add(this.buttonAdd);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(127, 117);
+            this.panel1.TabIndex = 16;
             // 
             // MainForm
             // 
@@ -576,6 +576,7 @@
             this.ClientSize = new System.Drawing.Size(852, 603);
             this.Controls.Add(this.comboBoxFakeKCP);
             this.Controls.Add(this.labelFakeKCP);
+            this.Controls.Add(this.checkBoxManyUser);
             this.Controls.Add(this.buttonUserConfig);
             this.Controls.Add(this.checkBoxTLS);
             this.Controls.Add(this.checkBoxWS);
@@ -603,7 +604,6 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownAlterID)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -635,10 +635,7 @@
         private System.Windows.Forms.CheckBox checkBoxUserLevel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ListBox listBoxManyUser;
-        private System.Windows.Forms.Button buttonDel;
-        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.CheckBox checkBoxManyUser;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.CheckBox checkBoxRouting;
         private System.Windows.Forms.CheckBox checkBoxHttpFake;
@@ -649,6 +646,9 @@
         private System.Windows.Forms.Button buttonUserConfig;
         private System.Windows.Forms.Label labelFakeKCP;
         private System.Windows.Forms.ComboBox comboBoxFakeKCP;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.Button buttonAdd;
     }
 }
 
