@@ -51,6 +51,9 @@
             this.checkBoxUserLevel = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.listBoxManyUser = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.checkBoxManyUser = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.checkBoxRouting = new System.Windows.Forms.CheckBox();
@@ -62,9 +65,6 @@
             this.buttonUserConfig = new System.Windows.Forms.Button();
             this.labelFakeKCP = new System.Windows.Forms.Label();
             this.comboBoxFakeKCP = new System.Windows.Forms.ComboBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonDel = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLog.SuspendLayout();
             this.panelServerConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
@@ -183,7 +183,7 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 66);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
             this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
             this.comboBoxLogLevel.TabIndex = 6;
@@ -375,7 +375,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(413, 136);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
@@ -391,6 +391,39 @@
             this.listBoxManyUser.Size = new System.Drawing.Size(274, 130);
             this.listBoxManyUser.TabIndex = 0;
             this.listBoxManyUser.DoubleClick += new System.EventHandler(this.listBoxManyUser_DoubleClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonDel);
+            this.panel1.Controls.Add(this.buttonAdd);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(127, 117);
+            this.panel1.TabIndex = 16;
+            // 
+            // buttonDel
+            // 
+            this.buttonDel.Enabled = false;
+            this.buttonDel.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.buttonDel.Location = new System.Drawing.Point(0, 38);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(126, 29);
+            this.buttonDel.TabIndex = 15;
+            this.buttonDel.Text = "删除用户";
+            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Enabled = false;
+            this.buttonAdd.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.buttonAdd.Location = new System.Drawing.Point(0, 3);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(126, 29);
+            this.buttonAdd.TabIndex = 14;
+            this.buttonAdd.Text = "添加用户";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // checkBoxManyUser
             // 
@@ -534,39 +567,6 @@
             this.comboBoxFakeKCP.Name = "comboBoxFakeKCP";
             this.comboBoxFakeKCP.Size = new System.Drawing.Size(117, 27);
             this.comboBoxFakeKCP.TabIndex = 15;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Enabled = false;
-            this.buttonAdd.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.buttonAdd.Location = new System.Drawing.Point(0, 3);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(126, 29);
-            this.buttonAdd.TabIndex = 14;
-            this.buttonAdd.Text = "添加用户";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // buttonDel
-            // 
-            this.buttonDel.Enabled = false;
-            this.buttonDel.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.buttonDel.Location = new System.Drawing.Point(0, 38);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(126, 29);
-            this.buttonDel.TabIndex = 15;
-            this.buttonDel.Text = "删除用户";
-            this.buttonDel.UseVisualStyleBackColor = true;
-            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.buttonDel);
-            this.panel1.Controls.Add(this.buttonAdd);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(127, 117);
-            this.panel1.TabIndex = 16;
             // 
             // MainForm
             // 

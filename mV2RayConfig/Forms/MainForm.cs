@@ -17,6 +17,7 @@ namespace mV2RayConfig
             comboBoxProtocol.SelectedIndex = 0;
             comboBoxFakeKCP.SelectedIndex = 0;
             textBoxUUID.Text = uuidGen();
+            buttonUserConfig.Hide();
         }
 
         ServerInfo serverInfo = new ServerInfo();
