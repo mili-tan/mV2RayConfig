@@ -162,14 +162,12 @@ namespace mV2RayConfig
                 configJson["streamSettings"] = stream;
             }
 
-            if (checkBoxWS.Checked)
-            {
-                stream["network"] = "ws";
-                configJson["streamSettings"] = stream;
-            }
             if (checkBoxTLS.Checked)
             {
-                stream["network"] = "tcp";
+                if (!checkBoxWS.Checked)
+                {
+                    stream["network"] = "tcp";
+                }
                 stream["security"] = "tls";
                 JObject tlsSet = new JObject();
                 JObject certSet = new JObject();
@@ -180,6 +178,12 @@ namespace mV2RayConfig
                 tlsSet["serverName"] = ServerName;
                 tlsSet["certificates"] = certificatesArray;
                 stream["tlsSettings"] = tlsSet;
+                configJson["streamSettings"] = stream;
+            }
+
+            if (checkBoxWS.Checked)
+            {
+                stream["network"] = "ws";
                 configJson["streamSettings"] = stream;
             }
 
@@ -249,7 +253,6 @@ namespace mV2RayConfig
             {
                 checkBoxHttpFake.Enabled = false;
                 checkBoxKCP.Enabled = false;
-                checkBoxTLS.Enabled = false;
             }
             else
             {
@@ -261,7 +264,6 @@ namespace mV2RayConfig
         {
             if (checkBoxTLS.Checked)
             {
-                checkBoxWS.Enabled = false;
                 checkBoxKCP.Enabled = false;
                 new TLSForm().ShowDialog();
             }
