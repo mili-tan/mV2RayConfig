@@ -38,8 +38,8 @@
             this.comboBoxProtocol = new System.Windows.Forms.ComboBox();
             this.comboBoxSecurity = new System.Windows.Forms.ComboBox();
             this.upDownPort = new System.Windows.Forms.NumericUpDown();
-            this.buttonNewGen = new System.Windows.Forms.Button();
             this.checkBoxMux = new System.Windows.Forms.CheckBox();
+            this.buttonNewGen = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownPort)).BeginInit();
             this.SuspendLayout();
@@ -116,7 +116,7 @@
             this.labelHostName.Name = "labelHostName";
             this.labelHostName.Size = new System.Drawing.Size(106, 20);
             this.labelHostName.TabIndex = 10;
-            this.labelHostName.Text = "域名";
+            this.labelHostName.Text = "服务器地址";
             // 
             // textBoxHostName
             // 
@@ -188,6 +188,20 @@
             0,
             0});
             // 
+            // checkBoxMux
+            // 
+            this.checkBoxMux.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxMux.AutoSize = true;
+            this.checkBoxMux.Checked = true;
+            this.checkBoxMux.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMux.Font = new System.Drawing.Font("微软雅黑", 7.8F);
+            this.checkBoxMux.Location = new System.Drawing.Point(115, 125);
+            this.checkBoxMux.Name = "checkBoxMux";
+            this.checkBoxMux.Size = new System.Drawing.Size(284, 24);
+            this.checkBoxMux.TabIndex = 17;
+            this.checkBoxMux.Text = "启用Mux.Cool(多路复用)";
+            this.checkBoxMux.UseVisualStyleBackColor = true;
+            // 
             // buttonNewGen
             // 
             this.buttonNewGen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -199,18 +213,6 @@
             this.buttonNewGen.Text = "生成";
             this.buttonNewGen.UseVisualStyleBackColor = true;
             this.buttonNewGen.Click += new System.EventHandler(this.buttonNewGen_Click);
-            // 
-            // checkBoxMux
-            // 
-            this.checkBoxMux.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxMux.AutoSize = true;
-            this.checkBoxMux.Font = new System.Drawing.Font("微软雅黑", 7.8F);
-            this.checkBoxMux.Location = new System.Drawing.Point(115, 125);
-            this.checkBoxMux.Name = "checkBoxMux";
-            this.checkBoxMux.Size = new System.Drawing.Size(284, 24);
-            this.checkBoxMux.TabIndex = 17;
-            this.checkBoxMux.Text = "启用Mux.Cool(多路复用)";
-            this.checkBoxMux.UseVisualStyleBackColor = true;
             // 
             // ClientConfigForm
             // 

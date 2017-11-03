@@ -35,6 +35,10 @@ namespace mV2RayConfig
         private void buttonNewGen_Click(object sender, EventArgs e)
         {
             richTextBoxConfig.Text = configGen();
+            if (!checkBoxHttpFake.Checked&&!checkBoxKCP.Checked&&!checkBoxWS.Checked&&!checkBoxTLS.Checked)
+            {
+                buttonUserConfig.Show();
+            }
         }
 
         private void labelPort_Click(object sender, EventArgs e)
@@ -274,6 +278,14 @@ namespace mV2RayConfig
         }
 
         private void buttonUserConfig_Click(object sender, EventArgs e)
+        {
+            string uuid = clients.id;
+            int id = clients.alterId;
+            int port = inbound.port;
+            new ClientConfigForm(uuid, id, port).Show();
+        }
+
+        private void panel1_DoubleClick(object sender, EventArgs e)
         {
             string uuid = clients.id;
             int id = clients.alterId;
