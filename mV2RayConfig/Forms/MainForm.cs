@@ -35,7 +35,7 @@ namespace mV2RayConfig
         private void buttonNewGen_Click(object sender, EventArgs e)
         {
             richTextBoxConfig.Text = configGen();
-            if (!checkBoxHttpFake.Checked&&!checkBoxKCP.Checked&&!checkBoxWS.Checked&&!checkBoxTLS.Checked)
+            if (!(checkBoxHttpFake.Checked||checkBoxKCP.Checked || checkBoxWS.Checked || checkBoxTLS.Checked))
             {
                 buttonUserConfig.Show();
             }
