@@ -10,6 +10,13 @@ namespace mV2RayConfig
 {
     public partial class MainForm : Form
     {
+        private ServerInfo serverInfo = new ServerInfo();
+        private Outbound outbound = new Outbound();
+        private Inbound inbound = new Inbound();
+        private InBoundSetting inBoundSetting = new InBoundSetting();
+        private VmessClients clients = new VmessClients();
+        private Log log = new Log();
+
         public MainForm()
         {
             InitializeComponent();
@@ -19,13 +26,6 @@ namespace mV2RayConfig
             textBoxUUID.Text = uuidGen();
             buttonUserConfig.Hide();
         }
-
-        ServerInfo serverInfo = new ServerInfo();
-        Outbound outbound = new Outbound();
-        Inbound inbound = new Inbound();
-        InBoundSetting inBoundSetting = new InBoundSetting();
-        VmessClients clients = new VmessClients();
-        Log log = new Log();
 
         private void Form1_Load(object sender, EventArgs e)
         {

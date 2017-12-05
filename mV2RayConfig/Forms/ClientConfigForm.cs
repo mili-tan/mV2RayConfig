@@ -7,9 +7,17 @@ namespace mV2RayConfig.Forms
 {
     public partial class ClientConfigForm : Form
     {
-        string mUUID;
-        int aID;
-        int mPort;
+        private string mUUID;
+        private int aID;
+        private int mPort;
+
+        private ServerInfo serverInfo = new ServerInfo();
+        private Outbound outbound = new Outbound();
+        private Inbound inbound = new Inbound();
+        private InBoundSetting inBoundSetting = new InBoundSetting();
+        private VmessClients clients = new VmessClients();
+        private Vnext vnext = new Vnext();
+        private Log log = new Log();
 
         public ClientConfigForm(string UUID,int alterId,int port)
         {
@@ -21,14 +29,6 @@ namespace mV2RayConfig.Forms
             comboBoxProtocol.SelectedIndex = 0;
             comboBoxSecurity.SelectedIndex = 0;
         }
-
-        ServerInfo serverInfo = new ServerInfo();
-        Outbound outbound = new Outbound();
-        Inbound inbound = new Inbound();
-        InBoundSetting inBoundSetting = new InBoundSetting();
-        VmessClients clients = new VmessClients();
-        Vnext vnext = new Vnext();
-        Log log = new Log();
 
         private void ClientConfigForm_Load(object sender, EventArgs e)
         {
