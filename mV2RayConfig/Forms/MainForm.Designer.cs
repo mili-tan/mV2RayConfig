@@ -183,7 +183,7 @@
             "warning",
             "error",
             "none"});
-            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 68);
+            this.comboBoxLogLevel.Location = new System.Drawing.Point(137, 66);
             this.comboBoxLogLevel.Name = "comboBoxLogLevel";
             this.comboBoxLogLevel.Size = new System.Drawing.Size(273, 27);
             this.comboBoxLogLevel.TabIndex = 6;
@@ -385,6 +385,7 @@
             this.listBoxManyUser.Enabled = false;
             this.listBoxManyUser.Font = new System.Drawing.Font("微软雅黑", 7.8F);
             this.listBoxManyUser.FormattingEnabled = true;
+            this.listBoxManyUser.HorizontalScrollbar = true;
             this.listBoxManyUser.ItemHeight = 19;
             this.listBoxManyUser.Location = new System.Drawing.Point(136, 3);
             this.listBoxManyUser.Name = "listBoxManyUser";

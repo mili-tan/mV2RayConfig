@@ -25,6 +25,9 @@ namespace mV2RayConfig
             comboBoxFakeKCP.SelectedIndex = 0;
             textBoxUUID.Text = uuidGen();
             buttonUserConfig.Hide();
+
+            //listBoxManyUser.HorizontalScrollbar = true;
+            //listBoxManyUser.ScrollAlwaysVisible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
